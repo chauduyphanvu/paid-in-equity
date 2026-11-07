@@ -1,0 +1,139 @@
+{
+ "lens": "rules",
+ "verdict": "fail",
+ "findings": [
+  {
+   "severity": "blocking",
+   "where": "site/privacy.md, 'This site' and 'Your choices' (Do Not Track) paragraphs",
+   "what": "Bus. & Prof. Code 22575(b)(6) requires the policy to say whether other parties may collect personal information about a visitor's online activity over time and across different sites when they use the operator's site or service. The page never says. It says the site sets no cookies and that 'Substack's pages follow its own policy', which leaves the reader to look it up. Substack's policy says it uses third-party analytics cookies (Google, Facebook), may collect information about your activity after you leave its site, and does not honor Do Not Track. A policy missing a required statement is the thing the page exists to prevent.",
+   "evidence": "AB 370 (Stats. 2013) text of Bus. & Prof. Code 22575(b), copy at https://www.mintz.com/sites/default/files/viewpoints/orig/6/2013/08/AB_370.pdf (leginfo.legislature.ca.gov and Justia returned 403 to me); https://substack.com/privacy (cookies, 'online activity after you leave', Do Not Track); GitHub side confirmed at https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages ('Data collection')",
+   "fix": "Add a plain sentence, for example: 'On this site and in the calculators, no other party collects information about what you do on other sites; GitHub only logs your IP address. Substack, where you subscribe, read and pay, is different: its policy says it and its analytics partners use cookies that can collect information about your activity, including after you leave Substack, and that it does not honor Do Not Track.' Only write the first half once the site is confirmed to have no embedded Substack form or other outside script."
+  },
+  {
+   "severity": "blocking",
+   "where": "site/privacy.md, 'The newsletter' (third paragraph: 'We don't sell or rent subscriber information...')",
+   "what": "Bus. & Prof. Code 22575(b)(1) requires the categories of third parties the operator may share personal information with. The page only says what is not shared (sponsors, no sale or rental) and never names who does receive it. Missing: the email and payment services (Substack, Stripe) and, per the other finding, the AI services that process reader mail. The categories collected are also incomplete: Substack passes on a subscriber's name as well as email address.",
+   "evidence": "AB 370 (Stats. 2013) text of Bus. & Prof. Code 22575(b), copy at https://www.mintz.com/sites/default/files/viewpoints/orig/6/2013/08/AB_370.pdf (leginfo.legislature.ca.gov and Justia returned 403 to me); https://substack.com/privacy ('the information necessary (including your name and email address)' goes to the creator)",
+   "fix": "Add one sentence: 'We share subscriber information only with the services that run the newsletter: Substack (sign-up and email delivery), Stripe (payments, if you pay) and the AI tools that help read and answer mail (see below). We share it with no one else.' Say 'name and email address' where it lists what Substack gives the publisher."
+  },
+  {
+   "severity": "blocking",
+   "where": "site/privacy.md, 'Email you send us'",
+   "what": "Says messages 'stay in the publisher's email and a private folder' and are 'used only to answer them and fix errors'. House rule 6 has the coordinator, an AI agent, read reader mail and draft the replies, so reader mail passes through an AI provider's service. A reader who writes in about their own pay believing only the publisher reads it is told something untrue by omission, on the one page that promises how mail is handled and in a newsletter whose pitch is honesty about how it is made.",
+   "evidence": "house-rules.md rule 6 ('Replies the coordinator drafts for the publisher'); plan.md 'The publisher's week' (answer the mail); site/disclaimer.md says AI agents write the issues, so the two pages disagree in tone",
+   "fix": "Say it: 'The publisher reads your message. AI agents that help run the newsletter also read it and draft replies, and the text is processed by [provider]'s service under its terms. Please don't send account numbers or tax IDs.' If the publisher in fact answers all mail by hand with no AI involved, the page is right and house-rules.md rule 6 needs to change instead."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, 'Email you send us'",
+   "what": "'Used only to answer them and fix errors' is too narrow: the plan feeds reader questions into 'Reader asks, we compute' (issues 35 and 52) and December's reader questions, with the reader's permission and identifying details removed. Asking for that permission is itself a use.",
+   "evidence": "plan.md 'Retention habits'; house-rules.md rule 6 (use a question only with permission, details removed)",
+   "fix": "Add: 'With your permission, and with details that identify you removed, a question may become the question in an issue.'"
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, 'The newsletter' (first paragraph)",
+   "what": "Three wording gaps against Substack's own pages. (1) Substack gives the publisher a subscriber's name as well as email address. (2) Survey answers are tied to the person: Substack's help says an export includes the subscriber's email address and/or profile, so 'Substack stores those answers and shows them to us' undersells it. (3) The activity rating is based on 'email opens and web views' per Substack, not 'opens and reads'.",
+   "evidence": "https://substack.com/privacy; Substack Help 'How do I use surveys on Substack?' (https://support.substack.com/hc/en-us/articles/23659170380180, page itself returned 403; wording seen in search summary); Substack Help 'What are the stars on my Subscribers dashboard?' (https://support.substack.com/hc/en-us/articles/6461334789652, same limitation)",
+   "fix": "'...Substack collects your name and email address and gives them to us.' 'Your survey answers are linked to your email address.' 'an activity rating based on email opens and web views'."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, 'This site' ('The site itself sets no cookies and runs no tracking') and 'The calculators'",
+   "what": "True of the calculators if `pie privacy` passes, but plan.md puts 'an offer to hear when the tax rules change' on the calculator site. If that is an embedded Substack subscribe box or script it loads Substack code and cookies, and this sentence becomes false. `pie privacy` checks the calculator code, not the site's other pages.",
+   "evidence": "plan.md 'Where each issue appears'; https://substack.com/privacy (cookies)",
+   "fix": "Make the sign-up a plain link to Substack, or change the sentence to say the sign-up box is Substack's."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, 'Your choices' and 'Email you send us'",
+   "what": "The only contact route is 'reply to any issue'. Someone who has unsubscribed, or never subscribed, has no issue to reply to, yet the page promises to answer deletion requests within thirty days.",
+   "evidence": "22575(b)(2) asks for a description of the review-and-change process; the page's process has no entry point for these people",
+   "fix": "Give a contact address (a mailbox the publisher reads) on the page."
+  },
+  {
+   "severity": "minor",
+   "where": "site/disclaimer.md and welcome/free.md ('If something looks wrong') and welcome/start-here.md ('How it's made, and how errors are fixed')",
+   "what": "These pages promise a dated correction 'under the post's summary' and a mention in 'the next email'. House rules and plan only require a corrections-log line and an updated post. If the correction workflow doesn't do both extra things, the published promise breaks the first time it is tested.",
+   "evidence": "house-rules.md 'Also part of the promise' (Errors are corrected in public); plan.md 'Trust, written down'",
+   "fix": "Check the correction steps (`pie package --correction`) include both; if not, drop the two clauses or add the steps."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, 'What doesn't change' (last sentence of the second paragraph)",
+   "what": "'You can cancel at any time in your Substack settings' is right for readers who pay on the web. Substack's help says a subscription bought in the iPhone app must be cancelled through Apple. That reader looks in Substack settings, finds nothing and is charged again. This is the sentence that stands in for the cancellation instructions California's automatic renewal law asks for.",
+   "evidence": "https://support.substack.com/hc/en-us/articles/360037489252-How-do-I-cancel-my-paid-subscription-on-Substack and https://support.substack.com/hc/en-us/articles/4531518922132 (iOS app) (pages returned 403 to me; content seen in search summaries)",
+   "fix": "'...cancel at any time in your Substack settings (or in your Apple subscriptions, if you subscribed in the iPhone app).'"
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, 'What you get' (first paragraph)",
+   "what": "The welcome to paying members says the membership 'pays for the research, the checking and the calculators' and never says AI agents do that work. It is said in every free piece and the disclaimer; a paying reader deserves it most.",
+   "evidence": "house-rules.md 'Also part of the promise' (every issue says how it's made)",
+   "fix": "Add 'AI agents research, write and check each issue' beside that sentence."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, 'Where the downloads are'",
+   "what": "Says the spreadsheet is 'attached to its post on Substack, below the line where the free preview ends'. Substack's announcement confirms PDF and XLSX files can be dragged into a post and appear as downloadable attachments, but neither it nor the help pages I could reach says a file placed below the paywall is hidden from free readers. Told to paying readers as fact.",
+   "evidence": "https://on.substack.com/p/new-tools-paywall-embeds ('Paid-only access: the article doesn't say'); plan.md repeats the same assumption",
+   "fix": "Test on a draft with a free account before January 5; if the file is visible, use Substack's paid-only post setting for the model or reword to 'attached to the post'."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, 'What you get' (second sentence) and welcome/start-here.md, 'The paid edition'",
+   "what": "Both read as if the two-Tuesdays pattern starts March 30, 2027. The plan says the paid edition opens March 30 (issue 13) and 'from Q2' most topics get two Tuesdays. A founding member who pays on January 5 may expect a paid issue the week after every free one from March 30.",
+   "evidence": "plan.md 'The calendar'",
+   "fix": "'The paid edition opens March 30, 2027. From April, most topics get a free issue and a paid issue a week later.' The numbers checker should confirm the first paid date against schedule.json."
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, 'Section 83(b)' (second sentence)",
+   "what": "'It's due within 30 days of the transfer, on Form 15620' reads as if the form is the only way. The IRS says Form 15620 'may' be used, 'in the alternative' a written statement meeting Treas. Reg. 1.83-2 works, and the form's use is voluntary. A reader may think a statement they already prepared is invalid. The 30 days and 'can't be revoked without IRS consent' are right.",
+   "evidence": "IRS Form 15620 (Rev. 4-2025), 'Who May File' and 'Revocation of an 83(b) Election', https://www.irs.gov/pub/irs-pdf/f15620.pdf",
+   "fix": "'...within 30 days of the transfer, on Form 15620 or in a written statement that meets Treasury Regulation 1.83-2.'"
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md (headings 'Cost basis', 'ESPP and ISO holding periods', '2026 numbers'), site/disclaimer.md first paragraph",
+   "what": "Plain English: these are used without a definition on a page for recruiters and salespeople as much as engineers: basis (what you paid plus what was taxed as pay), supplemental pay, lookback, offering date, AMT income, capital gain, estimated payment. The disclaimer uses 'RSUs' before saying what they are.",
+   "evidence": "issue-format.md 'Voice' (define each term the first time)",
+   "fix": "Add a half-sentence each; spell out RSUs in the disclaimer."
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, 'Cost basis' (first sentence)",
+   "what": "Says 'shares granted after 2013'. The Form 1099-B instructions say 'granted or acquired after 2013'. Passed to the numbers checker; I'm not re-doing the tax lens.",
+   "evidence": "https://www.irs.gov/instructions/i1099b, Box 1e 'Initial basis'",
+   "fix": "'For equity pay granted or acquired after 2013...'"
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/start-here.md, 'The four people' and 'The calculators'; welcome/free.md, 'What arrives on Tuesdays'",
+   "what": "Two facts I can't confirm from the files my lens may open: Priya's age (24) and that the first calculator is 'a withholding gap calculator'. Neither is in plan.md. Also free.md says 'the tax forms on their way' for December, which plan.md puts in February, and 'See you Tuesday' never says the first issue is November 17 (about.md does).",
+   "evidence": "plan.md 'The four characters', 'The calendar'",
+   "fix": "Check characters.json and schedule.json; give the first issue's date in free.md."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/start-here.md (about 426 words without the comment), site/cheat-sheet.md (about 570; 419 without Sources)",
+   "what": "Both are over the 400-word target; the rest are under (free 353, paid 304, about 234, disclaimer 363, privacy 390, counted without comments and link addresses). The cheat sheet's table text is the part to cut if it must fit one printed page.",
+   "evidence": "word count of each file",
+   "fix": "Trim start-here's characters list (repeated in free.md and about.md) and the cheat sheet's sources into one line each."
+  }
+ ],
+ "verified": [
+  "No crossing of house rules 1-6 in any of the seven: no sentence tells a reader what to do with shares, options, money or a job; no 'best', 'recommended', 'should' or 'optimal' (grepped); no forecast; no paperwork done for a reader (the 83(b) text points to the IRS form and its 30-day deadline); no credential claimed; the four characters are labelled fictional and no reader is quoted",
+  "Provider names (Substack, Stripe, GitHub) appear only as the publisher's own infrastructure, as the privacy page requires, never as something for the reader to buy or use",
+  "Disclaimer has all four items house-rules 'Site and email' asks for: general information through fictional examples; no adviser, accountant or lawyer relationship; calculators without warranty and the reader's decisions their own; how corrections work",
+  "Privacy has the items 'Site and email' lists: Substack and Stripe, calculators collect nothing, GitHub Pages IP logging, mail, unsubscribe and deletion",
+  "Bus. & Prof. Code 22575(b)(2) (review-and-change process), (3) (how material changes are announced), (4) (effective date) and (5) (Do Not Track) are each addressed in privacy.md",
+  "GitHub Pages logs visitor IP addresses for security whether or not the visitor is signed in (GitHub Docs, About GitHub Pages, 'Data collection', which links GitHub's privacy statement)",
+  "Substack paths in the setup comments: welcome emails in Settings > Emails with separate free and paid versions; the default welcome template carries the 'New reader survey' and the button can be deleted; About page in Settings > Website; short description in Settings > Basics; publish without emailing by clearing the 'Send via email' box; unsubscribe link in email footer; account deletion in settings (Substack Help pages, seen through search summaries because support.substack.com returned 403 to my fetch)",
+  "Substack allows PDF and XLSX files to be dropped into a post as downloadable attachments (on.substack.com/p/new-tools-paywall-embeds)",
+  "Form 15620: 30 days after transfer; no revocation without IRS consent (IRS Form 15620 Rev. 4-2025)",
+  "How-it's-made sentence ('AI agents research, write and check') and the IRS-examples claim are in free.md, start-here.md, about.md and disclaimer.md (not in paid.md; see minor finding) and match house-rules wording; the not-advice line is in free, paid, start-here, about, the cheat sheet and the disclaimer; no sponsor appears; no tease in any piece",
+  "Calculator claims (runs in the browser, nothing leaves the page, saved scenarios are encrypted files on the reader's device) match house-rules rule 7"
+ ],
+ "checked_at": "2026-11-06"
+}

@@ -1,0 +1,26 @@
+{
+ "name": "Paid in Equity",
+ "plan_doc": {
+  "url": "https://claude.ai/artifact/8Ya78wwWMydYe4db7oM3mW",
+  "id": "3d186dfe-e5b2-4f47-a717-8657dd73599d",
+  "status_enum": "089201bd-fbda",
+  "status_options": [
+   "Not started",
+   "Drafting",
+   "Ready",
+   "Sent"
+  ],
+  "sync_status": true
+ },
+ "substack_url": "https://paidinequity.substack.com",
+ "site_url": "",
+ "github_repo": "chauduyphanvu/paid-in-equity",
+ "launch_setup_done": false,
+ "reserve_target": 4,
+ "figure_max_age_days": 30,
+ "news_every_days": 7,
+ "word_range": [
+  800,
+  1000
+ ]
+}

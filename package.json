@@ -1,0 +1,6 @@
+{
+ "name": "paid-in-equity",
+ "private": true,
+ "type": "module",
+ "scripts": { "test": "node --test" }
+}

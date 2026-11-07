@@ -1,0 +1,91 @@
+{
+ "lens": "numbers",
+ "verdict": "pass",
+ "findings": [
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, Section 83(b), sentence 2 ('on Form 15620')",
+   "what": "Reads as if the election must be made on Form 15620. The IRS says the form is voluntary and a written statement that meets Treas. Reg. 1.83-2 is equally valid, so a reader who already drafted a statement could think it is void. The 30-day deadline, the no-revocation rule and the RSU/option exclusion are all correct.",
+   "evidence": "Pub 525 (2025), Restricted Property, 'How to make the choice' ('filing a written statement or Form 15620'); Form 15620 instructions, 'Who May File' ('In the alternative, an 83(b) election may be made by filing a written statement') and Privacy Act notice ('its use is voluntary'); https://www.irs.gov/pub/irs-pdf/f15620.pdf",
+   "fix": "'It's due within 30 days of the transfer, on Form 15620 or a signed written statement, and can't be revoked without IRS consent.'"
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, 2026 numbers, AMT exemption bullet",
+   "what": "Gives only 'single' and 'joint'. The IRS table is 'Unmarried Individuals (other than Surviving Spouses)', which includes head of household, so Leo (head of household) uses $90,100 and a $500,000 threshold, but the sheet never says so. Married filing separately ($70,100, $500,000 threshold) is also missing, although the Medicare line does list that status. Every figure that is given is right.",
+   "evidence": "Rev. Proc. 2025-32, section 4.10 (exemption table: joint $140,200; unmarried $90,100; married filing separately $70,100; phase-out thresholds $1,000,000 / $500,000 / $500,000); IRC 55(d)(1)(B); welcome/checks/work/numbers.py",
+   "fix": "Write '$90,100 single or head of household, $140,200 joint, $70,100 married filing separately', with the $500,000 threshold shared by single, head of household and separate filers."
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, Cost basis, sentence 1 ('For shares granted after 2013')",
+   "what": "Narrower than the rule. Form 1099-B instructions bar adding the wage income to basis for compensation arrangements 'granted or acquired after 2013'; Pub 525 says 'options granted on or after January 1, 2014'. A reader whose award was granted earlier but whose shares were acquired in 2026 is still covered by the rule but could read the sentence as excluding them.",
+   "evidence": "Instructions for Form 1099-B (2026), Specific Instructions, box 1e / basis ('You cannot increase initial basis for income recognized upon the exercise of a compensatory option or the vesting or exercise of other equity-based compensation arrangements granted or acquired after 2013'); Pub 525 (2025), Nonstatutory Stock Options, 'Sale of the stock'",
+   "fix": "'For stock granted or acquired after 2013, Form 1099-B can't include what was taxed as wages...'"
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, ESPP and ISO holding periods, 'ESPP, qualifying' bullet",
+   "what": "'The lesser of the actual gain and the grant-date discount' gives a negative number if the shares are sold at a loss. Pub 525 says a loss means no ordinary income. (The ISO bullet's 'capped at the gain' has the same gap but is clearer.) The 15 percent arithmetic is right: with a 15% plan the grant-date discount is 15% of the grant-date value, and my rerun of Pub 525 Examples 10 and 11 matches.",
+   "evidence": "Pub 525 (2025), Statutory Stock Options, 'Option granted at a discount' and Examples 10 and 11; welcome/checks/work/numbers.py",
+   "fix": "Add 'or zero if you sold at a loss' to both bullets."
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, Dates for 2026 returns, rows 'February 1, 2027' (3921/3922) and 'February 16, 2027' (1099-B)",
+   "what": "These two dates are derived, not quoted. The IRS has not yet published the 2026 General Instructions for Certain Information Returns. The derivation is sound (Jan 31, 2027 is a Sunday so Monday Feb 1; Feb 15, 2027 is Washington's Birthday so Tuesday Feb 16, and the 2025 instructions show the same pattern: Feb 2 and Feb 17, 2026), and the W-2 date of Feb 1, 2027 is stated outright in the 2026 W-2 instructions. Re-check when the 2026 instructions are posted.",
+   "evidence": "IRC 6039(b) (Jan 31); IRC 7503; 5 U.S.C. 6103 (third Monday in February); 26 CFR 1.6045-1(k)(2) (Feb 15); General Instructions for Certain Information Returns (2025), part M; General Instructions for Forms W-2 and W-3 (2026); welcome/checks/work/numbers.py",
+   "fix": "Keep the dates; add the 2026 General Instructions for Certain Information Returns to Sources once published, as part of the January rollover re-check the file header already calls for."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, The newsletter, sentence 2 ('an activity rating based on opens and reads')",
+   "what": "Substack's own help page describes the star rating as how actively a subscriber used the publication in the last month, 'including email opens and web views'. 'Reads' is close but not Substack's term, and some creator guides say other activity feeds it.",
+   "evidence": "Substack support, 'What are the stars on my Subscribers dashboard?' https://support.substack.com/hc/en-us/articles/6461334789652-What-are-the-stars-on-my-Subscribers-dashboard (found by search; the page itself returned 403 to the fetch tool)",
+   "fix": "'gives each subscriber an activity rating (stars) based on activity such as email opens and web views'."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, This site, first link",
+   "what": "The GitHub Docs link redirects to a renamed page (about-github-pages now lands on what-is-github-pages). The claim it supports (a Pages visitor's IP address is logged and stored for security, signed in or not) is correct on the new page.",
+   "evidence": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages, 'Data collection'",
+   "fix": "Point the link at the what-is-github-pages URL."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/free.md, welcome/about.md, welcome/start-here.md ('How it's made') and site/disclaimer.md ('The calculators')",
+   "what": "All four say every calculator is tested against the IRS's own worked examples. Nothing can be shown today: engine/years and engine/test/irs are empty and docs/ has no calculator yet. Fine as a commitment for the first issue, but it should be true when L1 ships on November 17, 2026.",
+   "evidence": "ls engine/years engine/test/irs (both empty); docs/ holds only index, cheat-sheet, corrections, disclaimer and privacy",
+   "fix": "Have the tester confirm the IRS-example tests exist before L1 goes out; until then none of these pages is wrong, only ahead of the work."
+  }
+ ],
+ "verified": [
+  "All schedule dates are Tuesdays; first issue Tuesday, November 17, 2026 (about.md, start-here.md; schedule.json L1, tool 'Withholding gap calculator')",
+  "Founding memberships on sale Tuesday, January 5, 2027 (paid.md, start-here.md) matches schedule issue 1 and the plan; tax season starts in January as free.md says (issue 1 'Owe tax on your RSUs? Fix it before January 15')",
+  "Paid edition opens Tuesday, March 30, 2027 (paid.md, start-here.md) matches schedule issue 13; 'a paid issue a week later' matches every paid/free pair from April 6 and 13 (all gaps 7 days); L1 to L7 cover the December 'moves and forms' as free.md says",
+  "Character facts in free.md, start-here.md, about.md, disclaimer.md match characters.json: Priya 24, WA, $180,000 (140,000 + 40,000), RSUs and ESPP; Marcus CA, $350,000 (220,000 + 130,000), RSUs and ESPP, married filing jointly; Dana CA, ISOs, no ESPP; Leo TX, $280,000 (140,000 salary + 100,000 commissions + 40,000 RSUs), head of household",
+  "privacy.md effective date November 6, 2026 (a Friday, today); survey described as two optional questions, consistent with free.md",
+  "Withholding on supplemental pay: optional flat 22 percent; 37 percent on the excess over $1 million in a calendar year (Pub 15 (2026) section 7 and What's New)",
+  "Top rate 37 percent for 2026 (Rev. Proc. 2025-32 section 4.01; $640,600 single, $768,700 joint)",
+  "Social Security 6.2 percent up to the $184,500 wage base for 2026 (Pub 15 (2026) section 9; SSA notice, 90 FR 49047, 2025-19763 published Nov 3, 2025 - citation and page confirmed in the Federal Register record); Medicare 1.45 percent with no cap",
+  "Additional Medicare Tax 0.9 percent over $250,000 joint, $125,000 married filing separately, $200,000 otherwise (IRC 3101(b)(2)); employers withhold it past $200,000 (Pub 15 (2026) section 9)",
+  "AMT 2026: exemption $90,100 unmarried, $140,200 joint; phase-out starts at $500,000 / $1,000,000 and removes 50 cents per dollar (Rev. Proc. 2025-32 section 4.10; complete phase-out $680,200 / $1,280,400 reproduces the 50-cent rate; IRC 55(d)(2) as amended)",
+  "Long-term capital gain means held more than one year (IRC 1222(3))",
+  "Table of when each kind is taxed: RSUs taxed as wages at transfer (IRS Information Letter 2024-0010, a non-binding letter but consistent with Pub 525); ESPP and ISO nothing at purchase or exercise (Pub 525 Statutory Stock Options); ISO spread is an AMT adjustment on Form 6251 line 2i (Instructions for Form 6251 (2025)); NSO spread is wages at exercise, nothing at grant when value is not readily determinable (Pub 525 Nonstatutory Stock Options)",
+  "Holding period: later of 2 years from grant and 1 year from transfer (Pub 525; IRC 422(a)(1), 423(a)(1))",
+  "ESPP wages, qualifying and sold-early formulas, and ISO sold-early formula, reproduce Pub 525 Examples 8, 10 and 11 exactly (welcome/checks/work/numbers.py); 15 percent plan discount equals 15 percent of the grant-date value",
+  "No Social Security, Medicare or income tax withheld on ISO and ESPP wages (Pub 15-B (2026) Employee Stock Options; IRC 421(b))",
+  "Form 8949 code B for incorrect 1099-B basis (Instructions for Form 8949 (2025), column (f) table)",
+  "83(b): 30 days from transfer, not revocable without IRS consent, not available for options or (as unsecured promises, Treas. Reg. 1.83-3(e)) RSUs, available for stock from an option exercised before vesting (IRC 83(b)(2); Pub 525 Restricted Property; Form 15620 instructions)",
+  "Fourth 2026 estimated payment Friday, January 15, 2027 (Form 1040-ES (2026) payment schedule)",
+  "W-2 to employees Monday, February 1, 2027 (General Instructions for Forms W-2 and W-3 (2026)); 3921 and 3922 follow the same January 31 rule (IRC 6039(b), 7503; 2025 instructions show Feb 2, 2026 when Jan 31 fell on a Saturday)",
+  "1099-B from brokers by Tuesday, February 16, 2027: statutory date Feb 15 (26 CFR 1.6045-1(k)(2)) is Washington's Birthday, the third Monday in February (5 U.S.C. 6103), so the next business day",
+  "2026 return due Thursday, April 15, 2027 (IRC 6072(a)); April 16 (Friday) is DC Emancipation Day, which does not affect April 15",
+  "Cheat sheet built page (docs/cheat-sheet/index.html) carries the same dollar figures, percentages, dates and form numbers as site/cheat-sheet.md",
+  "All 29 links in the pieces return HTTP 200 (the two Federal Register / eCFR links showed an anti-bot page to curl but the records were read through the Federal Register API and eCFR API)",
+  "privacy.md: GitHub logs a Pages visitor's IP address for security whether or not signed in (GitHub Docs, Data collection); Stripe processes Substack card payments (Substack privacy policy, Service Providers); Substack gives the creator the subscriber's email address (Substack privacy policy)",
+  "free.md setup comment: creator guides agree Substack's default welcome email carries a reader-survey button that editing removes (not confirmed in Substack's own documentation; setup note only, never shown to readers)",
+  "Pub 15 section numbers cited (7 supplemental wages, 9 Social Security and Medicare) match the 2026 table of contents; Pub 15 itself gives only the $200,000 Additional Medicare withholding threshold, the $250,000 and $125,000 figures come from IRC 3101 (also cited)"
+ ],
+ "checked_at": "2026-11-06"
+}

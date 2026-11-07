@@ -1,0 +1,1300 @@
+[
+  {
+    "key": "rsu.taxed_when_stock_transferred",
+    "value": "Stock-settled RSU: fair market value of the stock is included in gross income in the year the stock is transferred to the employee after the vesting condition is met (cash-settled: the year the cash is paid).",
+    "applies_to": "all years",
+    "source_title": "IRS Information Letter 2024-0010 (June 18, 2024; released 6/28/2024)",
+    "url": "https://www.irs.gov/pub/irs-wd/24-0010.pdf",
+    "locator": "p. 2, \"Timing of Income Taxation of Equity Compensation\", RSU paragraph",
+    "quote": "Generally, under IRC Section 83, the fair market value of the stock is included in the service provider’s gross income in the year the transfer occurs.",
+    "checked": "2026-11-06",
+    "notes": "The letter's wording is 'the year the transfer occurs' (settlement/delivery), which can differ from the vesting date when delivery is later. The letter is general information that says it 'does not constitute a ruling'; it is an IRS document, not a rule. The statute is IRC 83(a) (next entries). Cash-settled RSUs: the same paragraph says 'If the service recipient settles the RSU in cash, then the amount is included in gross income the year the cash is paid to the service provider.'"
+  },
+  {
+    "key": "rsu.not_taxed_at_grant",
+    "value": "RSUs are generally not taxable on the grant date.",
+    "applies_to": "all years",
+    "source_title": "IRS video text script: U.S. taxation of stock-based compensation received by nonresident aliens",
+    "url": "https://www.irs.gov/newsroom/us-taxation-of-stock-based-compensation-received-by-nonresident-aliens-youtube-video-text-script",
+    "locator": "RSU taxation slide narration (\"Next, let's discuss how RSUs are taxed.\")",
+    "quote": "Generally, RSUs are not taxable at the Grant Date and generally are exempt from IRC section 451 and 409.",
+    "checked": "2026-11-06",
+    "notes": "IRS outreach/training material (webinar script), not a rule or publication; written for nonresident-alien audiences but states the general RSU rule. I found no IRS publication that says this for RSUs in so many words. Safer to pair with the Information Letter entry above."
+  },
+  {
+    "key": "rsu.are_wages_subject_to_income_tax_withholding",
+    "value": "Restricted stock and RSUs are wages subject to federal income tax withholding.",
+    "applies_to": "all years",
+    "source_title": "IRS Information Letter 2024-0010 (June 18, 2024; released 6/28/2024)",
+    "url": "https://www.irs.gov/pub/irs-wd/24-0010.pdf",
+    "locator": "p. 1, \"Timing of Income Taxation of Equity Compensation\"",
+    "quote": "In general, equity compensation such as restricted stock and RSUs are wages subject to federal income tax withholding.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "rsu.statute_83a_inclusion",
+    "value": "Property transferred for services is included in gross income in the first taxable year in which the rights are transferable or not subject to a substantial risk of forfeiture (value = fair market value then, minus any amount paid).",
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 83(a) (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/83",
+    "locator": "26 U.S.C. 83(a)",
+    "quote": "shall be included in the gross income of the person who performed such services in the first taxable year in which the rights of the person having the beneficial interest in such property are transferable or are not subject to a substantial risk of forfeiture, whichever is applicable.",
+    "checked": "2026-11-06",
+    "notes": "uscode.house.gov returned HTTP 404 to automated requests, so the Code text was read on law.cornell.edu, which republishes the Code as amended (its amendment notes cite P.L. 119-21)."
+  },
+  {
+    "key": "rsu.pub525_include_fmv_when_vested",
+    "value": "Restricted property: include fair market value minus any amount paid in income for the year it becomes substantially vested.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Restricted Property (first section)",
+    "quote": "When the property becomes substantially vested, you must include its FMV, minus any amount you paid for it, in your income for that year.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 does not use the term 'RSU' in this section (it appears only under Qualified Equity Grants / section 83(i)). It is the IRS's plain-language statement of IRC 83(a). The 2025 edition is the latest; the 2026 edition is not published yet."
+  },
+  {
+    "key": "rsu.w2_box1",
+    "value": "The amount included in income for restricted stock or an RSU is reported in Box 1 of the employee's Form W-2.",
+    "applies_to": "all years",
+    "source_title": "IRS Information Letter 2024-0010 (June 18, 2024; released 6/28/2024)",
+    "url": "https://www.irs.gov/pub/irs-wd/24-0010.pdf",
+    "locator": "p. 2, end of RSU paragraph",
+    "quote": "Regardless of whether the award is restricted stock or an RSU, the amount included in gross income is reported in Box 1 of the employee’s Form W-2.",
+    "checked": "2026-11-06",
+    "notes": "The IRS NRA webinar script adds that employers 'often include in box 14 of the Form W-2 the letters RSU' and show the value in boxes 1, 3 and 5; that is common practice, not a requirement, so I did not make it a separate entry."
+  },
+  {
+    "key": "rsu.fica_wages",
+    "value": "RSUs are wages for social security, Medicare and (if applicable) Additional Medicare Tax.",
+    "applies_to": "all years",
+    "source_title": "IRS Information Letter 2024-0010 (June 18, 2024; released 6/28/2024)",
+    "url": "https://www.irs.gov/pub/irs-wd/24-0010.pdf",
+    "locator": "p. 2, \"Social Security and Medicare Taxation of Equity Compensation\"",
+    "quote": "In general, equity compensation such as restricted stock and RSUs are wages. They are subject to social security and Medicare (FICA) taxes, and, if applicable, the Additional Medicare Tax.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "rsu.fica_special_timing_rule",
+    "value": "For FICA, an RSU that vests in a later year than granted is generally treated as nonqualified deferred compensation: wages as of the later of when services are performed or when there is no substantial risk of forfeiture.",
+    "applies_to": "all years",
+    "source_title": "IRS Information Letter 2024-0010 (June 18, 2024; released 6/28/2024)",
+    "url": "https://www.irs.gov/pub/irs-wd/24-0010.pdf",
+    "locator": "p. 2, last paragraph of the FICA section",
+    "quote": "Under IRC Section 3121(v)(2), any amount deferred under a NQDC plan is considered as wages for FICA tax purposes as of the later of (1) when the services are performed, or (2) when there is no substantial risk of forfeiture of the rights to such amount.",
+    "checked": "2026-11-06",
+    "notes": "Edge case for a one-page sheet: FICA can attach at vesting even when delivery of shares comes later, so the FICA date and the income-tax date can differ. Optional for the cheat sheet."
+  },
+  {
+    "key": "rsu.basis_equals_amount_included_as_income",
+    "value": "Basis in property received for services = the fair market value included in income.",
+    "applies_to": "all years",
+    "source_title": "Publication 551 (12/2025), Basis of Assets",
+    "url": "https://www.irs.gov/publications/p551",
+    "locator": "Property Received for Services (and Restricted Property, same chapter)",
+    "quote": "If you receive property for services, include the property's FMV in income. The amount you include in income becomes your basis.",
+    "checked": "2026-11-06",
+    "notes": "Pub 551 says this for property received for services in general and does not name RSUs; for restricted property it adds 'your basis in the property is its FMV when it becomes substantially vested'. Pub 525 says for restricted-property elections 'Your basis for figuring gain or loss when you sell the property is the amount you paid for it plus the amount you included in income as compensation.'"
+  },
+  {
+    "key": "rsu.capital_gain_holding_period_starts_at_vesting",
+    "value": "Holding period for restricted property begins when the property becomes substantially vested.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Restricted Property (first section)",
+    "quote": "Your holding period for this property begins when the property becomes substantially vested.",
+    "checked": "2026-11-06",
+    "notes": "Applies to restricted property under IRC 83; for stock-settled RSUs the shares are transferred at settlement, so the practical start is the settlement/delivery date. Pub 525 does not say that sentence about RSUs explicitly."
+  },
+  {
+    "key": "rsu.form1099b_basis_may_exclude_compensation_income",
+    "value": "For equity compensation granted or acquired after 2013, a broker cannot add the compensation income to the basis it reports on Form 1099-B; so the broker-reported basis can be lower than the true basis and need adjusting.",
+    "applies_to": "2026",
+    "source_title": "Instructions for Form 1099-B (2026)",
+    "url": "https://www.irs.gov/instructions/i1099b",
+    "locator": "Specific Instructions, Box 1e, \"Initial basis\"",
+    "quote": "You cannot increase initial basis for income recognized upon the exercise of a compensatory option or the vesting or exercise of other equity-based compensation arrangements granted or acquired after 2013.",
+    "checked": "2026-11-06",
+    "notes": "This is the IRS source for 'the 1099-B basis may need adjusting'. It tells brokers what they may NOT report; it does not say how often brokers' reported basis is wrong in practice, and it does not name RSUs (RSUs are 'other equity-based compensation arrangements'). I could not source 'often' from an IRS document, so use 'may'. Same rule as the regulation in the next entry."
+  },
+  {
+    "key": "rsu.reg_1_6045_1_broker_basis",
+    "value": "Regulation barring brokers from increasing initial basis for compensation income on awards granted or acquired on or after January 1, 2014.",
+    "applies_to": "all years",
+    "source_title": "26 CFR 1.6045-1(d)(6)(ii)(A) (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-26/section-1.6045-1",
+    "locator": "26 CFR 1.6045-1(d)(6)(ii)(A), \"Cost basis for specified securities acquired for cash\"",
+    "quote": "A broker may not increase initial basis for income recognized upon the exercise of a compensatory option or the vesting or exercise of other equity-based compensation arrangements, granted or acquired on or after January 1, 2014,",
+    "checked": "2026-11-06",
+    "notes": "Fragment of a longer sentence (the sentence continues with a digital-asset clause)."
+  },
+  {
+    "key": "form8949.fix_incorrect_1099b_basis",
+    "value": "If the basis on Form 1099-B is incorrect, enter code B in column (f) and correct it with an adjustment in column (g) (when the basis was reported to the IRS).",
+    "applies_to": "2025 forms; 2026 edition not yet posted",
+    "source_title": "Instructions for Form 8949 (2025)",
+    "url": "https://www.irs.gov/instructions/i8949",
+    "locator": "How To Complete Form 8949, Columns (f) and (g), code B row; Example 4 (Adjustment for incorrect basis)",
+    "quote": "Correct the error by entering an adjustment in column (g).",
+    "checked": "2026-11-06",
+    "notes": "The 8949 instructions never mention stock compensation, RSUs, or ESPPs by name; they cover any incorrect 1099-B basis. Full row text: 'If this transaction is reported on Part I with box A or box G checked at the top or if this transaction is reported on Part II with box D or box J checked at the top, enter the basis shown on Form 1099-B or Form 1099-DA (or substitute statement) in column (e), even though that basis is incorrect. Correct the error by entering an adjustment in column (g).' If the basis was NOT reported to the IRS (box B/E/H/K): 'enter the correct basis in column (e), and enter -0- in column (g).' The 2026 edition of these instructions is not posted yet."
+  },
+  {
+    "key": "form8949.purpose_reconcile_1099b",
+    "value": "Form 8949 reconciles amounts reported on Form 1099-B with what the taxpayer reports on the return.",
+    "applies_to": "2025 forms; 2026 edition not yet posted",
+    "source_title": "Instructions for Form 8949 (2025)",
+    "url": "https://www.irs.gov/instructions/i8949",
+    "locator": "Purpose of Form",
+    "quote": "Form 8949 allows you and the IRS to reconcile amounts that were reported to you and the IRS on Form 1099-B, Form 1099-DA, or Form 1099-S (or substitute statements) with the amounts you report on your return.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "fed.supplemental.optional_flat_rate",
+    "value": 0.22,
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Section 7, Supplemental Wages > Supplemental wages identified separately from regular wages",
+    "quote": "Withhold a flat 22% (no other percentage allowed).",
+    "checked": "2026-11-06",
+    "notes": "Pub 15 (2026) IS published (page title 'Publication 15 (2026) ... For use in 2026'), so the 2025 edition was not needed. Optional rate: available only if income tax was withheld from regular wages in the current or preceding calendar year (see conditions entry) and the supplemental wages are separately identified."
+  },
+  {
+    "key": "fed.supplemental.optional_flat_rate_conditions",
+    "value": "Optional 22% method requires income tax to have been withheld from regular wages in the current or preceding calendar year; payment must be separately stated or not paid with regular wages; not available above $1 million (mandatory rate applies).",
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Section 7, Supplemental Wages > Supplemental wages identified separately from regular wages",
+    "quote": "If you withheld income tax from an employee’s regular wages in the current or immediately preceding calendar year, you can use one of the following methods for the supplemental wages.",
+    "checked": "2026-11-06",
+    "notes": "Regulation text for the three conditions is 26 CFR 31.3402(g)-1(a)(7)(i): '(A) Paragraph (a)(2) of this section does not apply to the payment or the portion of the payment; (B) The supplemental wages are either not paid concurrently with regular wages or are separately stated on the payroll records of the employer; and (C) Income tax has been withheld from regular wages of the employee during the calendar year of the payment or the preceding calendar year.' The other method in the same Pub 15 section is the aggregate procedure (add the supplemental wages to regular wages for a payroll period and withhold on the total, subtracting tax already withheld)."
+  },
+  {
+    "key": "fed.supplemental.mandatory_rate",
+    "value": 0.37,
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Section 7, Supplemental Wages > Withholding on supplemental wages when an employee receives more than $1 million of supplemental wages from you during the calendar year",
+    "quote": "If a supplemental wage payment, together with other supplemental wage payments made to the employee during the calendar year, exceeds $1 million, the excess is subject to withholding at 37% (or the highest rate of income tax for the year).",
+    "checked": "2026-11-06",
+    "notes": "Only the excess over $1 million is subject to 37% (the regulation lets the employer apply it to the whole payment that crosses the line: 26 CFR 31.3402(g)-1(a)(4)(iv)). The next sentence in Pub 15: 'Withhold using the 37% rate without regard to the employee’s Form W-4.' Counted across all employers under common control."
+  },
+  {
+    "key": "fed.supplemental.mandatory_threshold",
+    "value": 1000000,
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Section 7, Supplemental Wages (same paragraph as the 37% rate)",
+    "quote": "Special rules apply to the extent supplemental wages paid to any one employee during the calendar year exceed $1 million.",
+    "checked": "2026-11-06",
+    "notes": "The regulation states a flat $1,000,000 (26 CFR 31.3402(g)-1(a)(2)); I saw no inflation-adjustment language in it."
+  },
+  {
+    "key": "fed.supplemental.rates_unchanged_after_pl_119_21",
+    "value": "22% optional / 37% over $1 million remain in 2026 because P.L. 119-21 permanently extended the individual rates enacted in P.L. 115-97.",
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Introductory Material, What's New, \"Withholding on supplemental wages\"",
+    "quote": "The withholding rate on supplemental wages remains 22% (37% if supplemental wages paid to an employee during the calendar year exceed $1 million) because P.L. 119-21 permanently extended the individual tax rates enacted in P.L. 115-97.",
+    "checked": "2026-11-06",
+    "notes": "Confirms the rates did not change under the 2025 law."
+  },
+  {
+    "key": "fed.supplemental.pl_119_21_sec_70101",
+    "value": "P.L. 119-21 sec. 70101 removed the 2025 sunset in IRC 1(j) (rate tables, including 37%), for taxable years beginning after December 31, 2025.",
+    "applies_to": "2026 and later",
+    "source_title": "Public Law 119-21 (One Big Beautiful Bill Act), sec. 70101, 139 Stat. 158",
+    "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm",
+    "locator": "Title VII, SEC. 70101(a) and (c)",
+    "quote": "Section 1(j) is amended-- (1) in paragraph (1), by striking ``, and before January 1, 2026'', and (2) by striking ``2018 Through 2025'' in the heading and inserting ``Beginning After 2017''.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "fed.top_marginal_rate_2026",
+    "value": 0.37,
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695, sec. 4.01 (Table 1)",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.01 Tax Rate Tables, TABLE 1 - Section 1(j)(2)(A) (PDF p. 10)",
+    "quote": "Over $768,700 $206,583.50 plus 37% of the excess over $768,700",
+    "checked": "2026-11-06",
+    "notes": "Table row (married filing jointly); the 37% top rate also applies over $640,600 for unmarried individuals (Table 3, 'Over $640,600 $191,171 plus 37%'). The 'highest rate of tax applicable under section 1' that the mandatory withholding rate follows is therefore 37% for 2026."
+  },
+  {
+    "key": "fed.supplemental.nso_and_restricted_property_are_supplemental_wages",
+    "value": "Regulation lists income recognized on the exercise of a nonstatutory stock option, and wage income on the lapse of a restriction on restricted property, among supplemental wages.",
+    "applies_to": "all years",
+    "source_title": "26 CFR 31.3402(g)-1(a)(1)(i), Supplemental wage payments (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-26/section-31.3402(g)-1",
+    "locator": "26 CFR 31.3402(g)-1(a)(1)(i)",
+    "quote": "Examples of wage payments that are included in supplemental wages include reported tips (except as provided in paragraph (a)(1)(v) of this section), overtime pay (except as provided in paragraph (a)(1)(iv) of this section), bonuses, back pay, commissions, wages paid under reimbursement or other expense allowance arrangements, nonqualified deferred compensation includible in wages, wages paid as noncash fringe benefits, sick pay paid by a third party as an agent of the employer, amounts that are includible in gross income under section 409A, income recognized on the exercise of a nonstatutory stock option, wages from imputed income for health coverage for a non-dependent, and wage income recognized on the lapse of a restriction on restricted property transferred from an employer to an employee.",
+    "checked": "2026-11-06",
+    "notes": "This is the primary source for 'NSO spread is withheld like other supplemental wages'. Pub 525 does NOT say that (see nso.* entries). RSUs are not named in this list; RSU income is wages that are not 'regular wages' (regular wages are 'amounts that are paid at a regular hourly, daily, or similar periodic rate ... or at a predetermined fixed determinable amount for the current payroll period'), so it falls inside the general definition 'Supplemental wages are all wages paid by an employer that are not regular wages' (same paragraph). Treating RSU vesting income as supplemental wages is therefore an inference from the definition, consistent with the Information Letter saying RSUs are wages subject to income tax withholding."
+  },
+  {
+    "key": "fed.supplemental.disqualifying_disposition_income_not_subject_to_withholding",
+    "value": "Income from disqualifying dispositions of statutory-option stock is neither regular nor supplemental wages for withholding.",
+    "applies_to": "all years",
+    "source_title": "26 CFR 31.3402(g)-1(a)(1)(iii) (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-26/section-31.3402(g)-1",
+    "locator": "26 CFR 31.3402(g)-1(a)(1)(iii)",
+    "quote": "If an amount of remuneration is not wages subject to income tax withholding, it is neither regular wages nor supplemental wages. Thus, for example, income from the disqualifying dispositions of shares of stock acquired pursuant to the exercise of statutory stock options, as described in section 421(b), is not included in regular wages or supplemental wages.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "fica.social_security_employee_rate",
+    "value": 0.062,
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Section 9, Withholding From Employees’ Wages > Social Security and Medicare Taxes > Tax rates and the social security wage base limit",
+    "quote": "For 2026, the social security tax rate is 6.2% (amount withheld) each for the employer and employee (12.4% total).",
+    "checked": "2026-11-06",
+    "notes": "Statute: IRC 3101(a), '6.2 percent of the wages' (next entry)."
+  },
+  {
+    "key": "fica.social_security_rate_statute",
+    "value": 0.062,
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 3101(a) (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/3101",
+    "locator": "26 U.S.C. 3101(a)",
+    "quote": "there is hereby imposed on the income of every individual a tax equal to 6.2 percent of the wages (as defined in section 3121(a)) received by the individual with respect to employment (as defined in section 3121(b)).",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "fica.social_security_wage_base",
+    "value": 184500,
+    "applies_to": "2026",
+    "source_title": "SSA, Cost-of-Living Increase and Other Determinations for 2026, 90 Fed. Reg. 49047 (Nov. 3, 2025), Docket SSA-2025-0255",
+    "url": "https://www.federalregister.gov/documents/2025/11/03/2025-19763/cost-of-living-increase-and-other-determinations-for-2026",
+    "locator": "90 Fed. Reg. 49047, SUPPLEMENTARY INFORMATION, national average wage index items (1); computation at 49050",
+    "quote": "The Old-Age, Survivors, and Disability Insurance (OASDI) contribution and benefit base will be $184,500 for remuneration paid in 2026 and self-employment income earned in tax years beginning in 2026.",
+    "checked": "2026-11-06",
+    "notes": "This is the Social Security Administration's own official determination (Federal Register notice). SSA's website pages (ssa.gov/oact/cola/cbb.html and ssa.gov/news/en/cola/factsheets/2026.html) returned HTTP 403 Access Denied to every automated request I made (curl and the fetch tool), so I could not open SSA's web announcement itself; I did not quote it. Pub 15 (2026) states the same figure (next entry). Context from the same notice: 'Because $184,500 exceeds the current base amount of $176,100, the OASDI contribution and benefit base is $184,500 for 2026.'"
+  },
+  {
+    "key": "fica.social_security_wage_base_pub15",
+    "value": 184500,
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Introductory Material, What's New, \"Social security and Medicare taxes for 2026\"",
+    "quote": "The social security wage base limit is $184,500.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "fica.medicare_rate",
+    "value": 0.0145,
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Section 9 > Social Security and Medicare Taxes > Tax rates and the social security wage base limit",
+    "quote": "The tax rate for Medicare is 1.45% (amount withheld) each for the employee and employer (2.9% total). There is no wage base limit for Medicare tax; all covered wages are subject to Medicare tax.",
+    "checked": "2026-11-06",
+    "notes": "Statute: IRC 3101(b)(1), '1.45 percent'. Pub 15 What's New: 'The Medicare tax rate is 1.45% each for the employee and employer, unchanged from 2025.'"
+  },
+  {
+    "key": "fica.additional_medicare_rate_and_withholding_threshold",
+    "value": {
+      "rate": 0.009,
+      "employer_withholding_threshold": 200000
+    },
+    "applies_to": "2026",
+    "source_title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "url": "https://www.irs.gov/publications/p15",
+    "locator": "Section 9 > Social Security and Medicare Taxes > Additional Medicare Tax withholding",
+    "quote": "In addition to withholding Medicare tax at 1.45%, you must withhold a 0.9% Additional Medicare Tax from wages you pay to an employee in excess of $200,000 in a calendar year.",
+    "checked": "2026-11-06",
+    "notes": "$200,000 is the EMPLOYER WITHHOLDING threshold, applied to the wages one employer pays regardless of filing status. The reader's actual Additional Medicare Tax liability threshold depends on filing status (next entry), and the difference is settled on Form 8959. Pub 15 also says: 'Additional Medicare Tax is only imposed on the employee. There is no employer share of Additional Medicare Tax.'"
+  },
+  {
+    "key": "fica.additional_medicare_liability_thresholds_by_filing_status",
+    "value": {
+      "married_filing_jointly": 250000,
+      "married_filing_separately": 125000,
+      "single_hoh_qss": 200000
+    },
+    "applies_to": "all years (not indexed)",
+    "source_title": "26 U.S.C. 3101(b)(2) (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/3101",
+    "locator": "26 U.S.C. 3101(b)(2)(A)-(C)",
+    "quote": "there is hereby imposed on every taxpayer (other than a corporation, estate, or trust) a tax equal to 0.9 percent of wages which are received with respect to employment (as defined in section 3121(b)) during any taxable year beginning after December 31, 2012, and which are in excess of— (A) in the case of a joint return, $250,000, (B) in the case of a married taxpayer (as defined in section 7703) filing a separate return, ½ of the dollar amount determined under subparagraph (A), and (C) in any other case, $200,000.",
+    "checked": "2026-11-06",
+    "notes": "Form 8959 instructions (2025) confirm: 'The threshold amounts below aren’t indexed for inflation.' (table: MFJ $250,000; MFS $125,000; single, head of household, qualifying surviving spouse $200,000) and 'Your employer must withhold Additional Medicare Tax on wages it pays to you in excess of $200,000 for the calendar year, regardless of your filing status and regardless of wages or compensation paid by another employer.' https://www.irs.gov/instructions/i8959"
+  },
+  {
+    "key": "espp.max_discount",
+    "value": 0.15,
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 423 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/423",
+    "locator": "26 U.S.C. 423(b)(6)",
+    "quote": "under the terms of the plan, the option price is not less than the lesser of— (A) an amount equal to 85 percent of the fair market value of the stock at the time such option is granted, or (B) an amount which under the terms of the option may not be less than 85 percent of the fair market value of the stock at the time such option is exercised;",
+    "checked": "2026-11-06",
+    "notes": "The statute sets a FLOOR on the purchase price (85 percent of the lesser of grant-date or purchase-date value if the plan looks back), i.e. at most a 15 percent discount from the lower of those two values. It does not say 'maximum discount 15%' in those words. In a plan with a lookback, the discount measured against the purchase-date price can exceed 15 percent when the stock rose after the grant date. Details are in the offering terms ('your plan documents set this')."
+  },
+  {
+    "key": "espp.annual_limit_25000",
+    "value": 25000,
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 423 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/423",
+    "locator": "26 U.S.C. 423(b)(8)",
+    "quote": "under the terms of the plan, no employee may be granted an option which permits his rights to purchase stock under all such plans of his employer corporation and its parent and subsidiary corporations to accrue at a rate which exceeds $25,000 of fair market value of such stock (determined at the time such option is granted) for each calendar year in which such option is outstanding at any time.",
+    "checked": "2026-11-06",
+    "notes": "Measured by the stock's fair market value at the grant date (not the discounted price paid). The statute states a fixed $25,000; I saw no inflation-adjustment language in 423. Rule for when a right accrues is in the next entry."
+  },
+  {
+    "key": "espp.annual_limit_accrual_rule",
+    "value": "A right to purchase accrues when the option (or part of it) first becomes exercisable in the calendar year, at the option's rate, never more than $25,000 of grant-date FMV per calendar year; unused accrued rights do not carry over to another option.",
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 423 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/423",
+    "locator": "26 U.S.C. 423(b)(8)(A)-(C)",
+    "quote": "the right to purchase stock under an option accrues when the option (or any portion thereof) first becomes exercisable during the calendar year; (B) the right to purchase stock under an option accrues at the rate provided in the option, but in no case may such rate exceed $25,000 of fair market value of such stock (determined at the time such option is granted) for any one calendar year; and (C) a right to purchase stock which has accrued under one option granted pursuant to the plan may not be carried over to any other option;",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "espp.qualifying_holding_period_statute",
+    "value": {
+      "after_grant_years": 2,
+      "after_transfer_years": 1
+    },
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 423 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/423",
+    "locator": "26 U.S.C. 423(a)(1)",
+    "quote": "no disposition of such share is made by him within 2 years after the date of the granting of the option nor within 1 year after the transfer of such share to him;",
+    "checked": "2026-11-06",
+    "notes": "The brief's wording 'more than 2 years after grant and more than 1 year after purchase' does not appear in any IRS source I opened. The statute says no disposition 'within 2 years' of grant 'nor within 1 year' of transfer; Pub 525 says the holding period is met if you 'don’t sell the stock until the end of the later of' the two periods. Use one of those two wordings (or 'not within 2 years of grant or 1 year of purchase'); the exact day-count boundary is not spelled out in the primary text I found."
+  },
+  {
+    "key": "espp.qualifying_holding_period_pub525",
+    "value": "Holding period requirement met if the stock is not sold until the end of the later of 1 year after the stock was transferred or 2 years after the option was granted.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Sale of the stock > Holding period requirement",
+    "quote": "You satisfy the holding period requirement if you don’t sell the stock until the end of the later of the 1-year period after the stock was transferred to you or the 2-year period after the option was granted.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. Same requirement for ISOs and ESPP options."
+  },
+  {
+    "key": "espp.nothing_taxed_at_purchase",
+    "value": "No income at grant or at exercise (purchase) of a statutory option, including an ESPP option.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Exercise of option",
+    "quote": "If you exercise a statutory stock option, don’t include any amount in income when you exercise the option.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. Statute: IRC 421(a)(1), 'no income shall result at the time of the transfer of such share to the individual upon his exercise of the option with respect to such share' (applies when 423(a) is met; if the holding periods are not met, 421(b) moves the income to the year of sale). Pub 525 also says: 'If you receive a statutory stock option, don’t include any amount in your income when the option is granted.'"
+  },
+  {
+    "key": "espp.qualifying_disposition_ordinary_income",
+    "value": "Qualifying disposition, option price below 100% of grant-date value (not below 85%): ordinary income (compensation) = the lesser of (a) grant-date FMV minus option price, or (b) sale-date FMV minus amount paid; the rest is capital gain. A loss is a capital loss with no ordinary income.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Employee stock purchase plan > Holding period requirement satisfied > Option granted at a discount",
+    "quote": "you must include in your income as compensation the lesser of: The excess of the FMV of the share at the time the option was granted over the option price, or The excess of the FMV of the share at the time of the disposition or death over the amount paid for the share under the option.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. Pub 525 adds: 'For this purpose, if the option price wasn’t fixed or determinable at the time the option was granted, the option price is figured as if the option had been exercised at the time it was granted.' (so for a lookback plan the grant-date figure uses the discount applied to grant-date value)."
+  },
+  {
+    "key": "espp.qualifying_disposition_statute_423c",
+    "value": "Statute: amount included as compensation = lesser of the two excesses; basis increased by that amount; no income tax withholding on it.",
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 423 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/423",
+    "locator": "26 U.S.C. 423(c)",
+    "quote": "there shall be included as compensation (and not as gain upon the sale or exchange of a capital asset) in his gross income, for the taxable year in which falls the date of such disposition or for the taxable year closing with his death, whichever applies, an amount equal to the lesser of— (1) the excess of the fair market value of the share at the time of such disposition or death over the amount paid for the share under the option, or (2) the excess of the fair market value of the share at the time the option was granted over the option price.",
+    "checked": "2026-11-06",
+    "notes": "Statute also says: 'In the case of the disposition of such share by the individual, the basis of the share in his hands at the time of such disposition shall be increased by an amount equal to the amount so includible in his gross income. No amount shall be required to be deducted and withheld under chapter 24 with respect to any amount treated as compensation under this subsection.'"
+  },
+  {
+    "key": "espp.disqualifying_disposition_ordinary_income",
+    "value": "Disqualifying disposition: ordinary income = FMV when the option was exercised minus the option price, NOT limited to the gain on the sale; add it to basis; the difference between the increased basis and sale price is capital gain or loss.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Employee stock purchase plan > Holding period requirement not satisfied",
+    "quote": "If you don’t satisfy the holding period requirement, your ordinary income is the amount by which the stock’s FMV when you exercised the option exceeded the option price. This ordinary income isn’t limited to your gain from the sale of the stock. Increase your basis in the stock by the amount of this ordinary income.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. Contrast with an ISO, where the ordinary income is limited to the gain (see iso.disqualifying_disposition)."
+  },
+  {
+    "key": "espp.example_qualifying_disposition",
+    "value": {
+      "sale_price_per_share": 30,
+      "option_price": 20,
+      "grant_date_fmv": 22,
+      "shares": 100,
+      "wages": 200,
+      "capital_gain": 800
+    },
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Example 10",
+    "quote": "In the year of sale, you must report as wages the difference between the option price ($20) and the value at the time the option was granted ($22). The rest of your gain ($8 per share) is capital gain, figured as follows.",
+    "checked": "2026-11-06",
+    "notes": "IRS worked example (option granted at $22 value, price $20, exercised at $23 eighteen months later, sold 14 months after that at $30, 100 shares): wages $200 [($22 x 100) - $2,000]; capital gain $800 ($1,000 gain - $200)."
+  },
+  {
+    "key": "espp.example_disqualifying_disposition",
+    "value": {
+      "sale_price_per_share": 30,
+      "option_price": 20,
+      "fmv_at_exercise": 23,
+      "shares": 100,
+      "wages": 300,
+      "capital_gain": 700
+    },
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Example 11",
+    "quote": "You didn’t satisfy the holding period requirement, so you must report $300 as wages and $700 as capital gain, figured as follows.",
+    "checked": "2026-11-06",
+    "notes": "IRS worked example: same facts as Example 10 but sold 6 months after exercise: wages $300 [($23 x 100) - $2,000]; capital gain $700 [$3,000 - ($2,000 + $300)]."
+  },
+  {
+    "key": "espp.holding_period_for_capital_gain_starts_day_after_exercise",
+    "value": "Holding period for the acquired shares begins the day after the option is exercised.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Sale of the stock > Holding period requirement",
+    "quote": "Your holding period for the property you acquire when you exercise an option begins on the day after you exercise the option.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged."
+  },
+  {
+    "key": "espp.form_3922_who_gets_one",
+    "value": "Form 3922 is filed for an ESPP option described in section 423(c) (exercise price below 100% of the grant-date value, or not fixed at grant), when legal title of the shares is first transferred.",
+    "applies_to": "all years",
+    "source_title": "Instructions for Forms 3921 and 3922 (04/2025)",
+    "url": "https://www.irs.gov/instructions/i3921",
+    "locator": "Specific Instructions for Form 3922 > Who Must File",
+    "quote": "Every corporation, which in any calendar year records, or has by its agent recorded, a transfer of the legal title of a share of stock acquired by the transferor (person who acquires the shares pursuant to the exercise of the option) pursuant to the transferor's exercise of an option granted under an employee stock purchase plan and described in section 423(c) (where the exercise price is less than 100% of the value of the stock on the date of grant, or is not fixed or determinable on the date of grant), must, for that calendar year, file Form 3922 for each transfer made during that year.",
+    "checked": "2026-11-06",
+    "notes": "Quote shortened by normalizing a parenthesis; text copied from the fetched page. A plan with a purchase price at 100 percent of grant-date value and no lookback would generate no Form 3922. Form 3922 boxes: 1 grant date, 2 exercise date, 3 FMV per share on grant date, 4 FMV per share on exercise date, 5 exercise price paid per share, 6 shares transferred, 7 date legal title transferred, 8 exercise price per share determined as if exercised on the grant date."
+  },
+  {
+    "key": "espp.form_3922_purpose_pub525",
+    "value": "Corporation must send or provide Form 3922 by January 31 (of the year after the sale/transfer).",
+    "applies_to": "2025 transfers (statement due January 31, 2026 per Pub 525)",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Employee stock purchase plan > Tip following Example 11",
+    "quote": "If you sold stock in 2025 that you acquired by exercising an option granted at a discount under an employee stock purchase plan, you should receive Form 3922 from the corporation. The corporation must send or provide you with the form by January 31, 2026.",
+    "checked": "2026-11-06",
+    "notes": "Statutory deadline text is in dates.forms_3921_3922_statute. Note the Pub 525 sentence says 'sold stock in 2025' while the Form 3922 instructions key the form to the transfer of legal title; the General Instructions say the statement is due February 2, 2026 for 2025 because January 31, 2026 was a Saturday."
+  },
+  {
+    "key": "statutory_options.no_fica_no_withholding_on_exercise",
+    "value": "No social security, Medicare or FUTA wages from exercising an ISO or ESPP option, or from any disposition of the stock.",
+    "applies_to": "2026",
+    "source_title": "Publication 15-B (2026), Employer’s Tax Guide to Fringe Benefits",
+    "url": "https://www.irs.gov/publications/p15b",
+    "locator": "Employee Stock Options",
+    "quote": "Wages for social security, Medicare, and FUTA taxes don’t include remuneration resulting from the exercise of an incentive stock option or an employee stock purchase plan option, or from any disposition of stock acquired by exercising such an option.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "statutory_options.no_withholding_on_disqualifying_or_espp_discount_income",
+    "value": "No income tax withholding is required on disqualifying-disposition income (ISO or ESPP) or on the ESPP discount portion in a qualifying disposition; the employer reports that income in Box 1 of Form W-2.",
+    "applies_to": "2026",
+    "source_title": "Publication 15-B (2026), Employer’s Tax Guide to Fringe Benefits",
+    "url": "https://www.irs.gov/publications/p15b",
+    "locator": "Employee Stock Options",
+    "quote": "Additionally, federal income tax withholding isn’t required on the income resulting from a disqualifying disposition of stock acquired by the exercise of an incentive stock option or an employee stock purchase plan option, or on income equal to the discount portion of stock acquired by the exercise of an employee stock purchase plan option resulting from any qualifying disposition of the stock.",
+    "checked": "2026-11-06",
+    "notes": "Same paragraph continues: 'The employer must report as income in box 1 of Form W-2 (a) the discount portion of stock acquired by the exercise of an employee stock purchase plan option upon a qualifying disposition of the stock, and (b) the spread (between the exercise price and the FMV of the stock at the time of exercise) upon a disqualifying disposition of stock acquired by the exercise of an incentive stock option or an employee stock purchase plan option.' So the income is wages for income tax (Box 1) but, per the entry above, not FICA wages. Statutory basis: IRC 421(b) and 423(c) last sentences ('No amount shall be required to be deducted and withheld under chapter 24')."
+  },
+  {
+    "key": "statutory_options.w2_code_v_does_not_apply",
+    "value": "Box 12 Code V is only for nonstatutory options; it does not apply to ISO/ESPP exercises or sales.",
+    "applies_to": "2026",
+    "source_title": "General Instructions for Forms W-2 and W-3 (2026)",
+    "url": "https://www.irs.gov/instructions/iw2w3",
+    "locator": "Box 12 > Code V—Income from the exercise of nonstatutory stock option(s)",
+    "quote": "This reporting requirement does not apply to the exercise of a statutory stock option, or the sale or disposition of stock acquired pursuant to the exercise of a statutory stock option.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "iso.no_regular_tax_at_exercise",
+    "value": 0,
+    "applies_to": "all years",
+    "source_title": "Instructions for Form 6251 (2025)",
+    "url": "https://www.irs.gov/instructions/i6251",
+    "locator": "Line 2i—Exercise of Incentive Stock Options",
+    "quote": "For the regular tax, no income is recognized when an incentive stock option (ISO), as defined in section 422(b), is exercised.",
+    "checked": "2026-11-06",
+    "notes": "Value 0 = regular (non-AMT) income recognized at exercise. Edition is 2025; the 2026 Form 6251 instructions are not posted yet. Pub 525 says the same: 'If you exercise a statutory stock option, don’t include any amount in income when you exercise the option.'"
+  },
+  {
+    "key": "iso.amt_adjustment_line_2i",
+    "value": "AMT adjustment on Form 6251 line 2i = FMV of the stock when rights first become transferable or no longer subject to a substantial risk of forfeiture, minus the amount paid.",
+    "applies_to": "all years (2025 instructions)",
+    "source_title": "Instructions for Form 6251 (2025)",
+    "url": "https://www.irs.gov/instructions/i6251",
+    "locator": "Line 2i—Exercise of Incentive Stock Options",
+    "quote": "However, this rule doesn’t apply for the AMT. Instead, you must generally include on line 2i the excess, if any, of: The fair market value (FMV) of the stock acquired through exercise of the option (determined without regard to any lapse restriction) when your rights in the acquired stock first become transferable or when these rights are no longer subject to a substantial risk of forfeiture; over The amount you paid for the stock, including any amount you paid for the ISO used to acquire the stock.",
+    "checked": "2026-11-06",
+    "notes": "For a typical vested-stock exercise the rights are transferable at exercise, so the adjustment is (FMV on exercise date minus exercise price) x shares, which is what Form 3921 boxes 3, 4 and 5 give you (see example entry)."
+  },
+  {
+    "key": "iso.amt_adjustment_pub525",
+    "value": "Pub 525: include as an AMT adjustment the amount by which the FMV exceeds the option price; enter on Form 6251, line 2i; AMT basis rises by the adjustment; no adjustment if disposed of in the same year as exercise.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Alternative minimum tax (AMT)",
+    "quote": "For the AMT, you must treat stock acquired through the exercise of an ISO as if no special treatment applied. This means that, when your rights in the stock are transferable or no longer subject to a substantial risk of forfeiture, you must include as an adjustment in figuring alternative minimum taxable income the amount by which the FMV of the stock exceeds the option price. Enter this adjustment on Form 6251, line 2i.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged."
+  },
+  {
+    "key": "iso.amt_same_year_sale",
+    "value": "If the ISO shares are sold in the same year as exercise, regular tax and AMT treatment are the same and no adjustment is required.",
+    "applies_to": "all years (2025 instructions)",
+    "source_title": "Instructions for Form 6251 (2025)",
+    "url": "https://www.irs.gov/instructions/i6251",
+    "locator": "Line 2i—Exercise of Incentive Stock Options",
+    "quote": "If you acquired stock by exercising an ISO and you disposed of that stock in the same year, the tax treatment under the regular tax and the AMT is the same, and no adjustment is required.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "iso.amt_basis_increase",
+    "value": "Increase the AMT basis of ISO stock by the line 2i adjustment; keep separate regular-tax and AMT basis records.",
+    "applies_to": "all years (2025 instructions)",
+    "source_title": "Instructions for Form 6251 (2025)",
+    "url": "https://www.irs.gov/instructions/i6251",
+    "locator": "Line 2i—Exercise of Incentive Stock Options",
+    "quote": "Increase your AMT basis in any stock acquired through the exercise of an ISO by the amount of the adjustment.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "iso.amt_adjustment_irs_example",
+    "value": {
+      "exercise_price_per_share": 10,
+      "fmv_per_share_on_exercise": 25,
+      "shares": 100,
+      "adjustment": 1500
+    },
+    "applies_to": "all years (2025 instructions)",
+    "source_title": "Instructions for Form 6251 (2025)",
+    "url": "https://www.irs.gov/instructions/i6251",
+    "locator": "Line 2i, Example",
+    "quote": "Your adjustment is $1,500 ($2,500 − $1,000). Enter it on Form 6251, line 2i.",
+    "checked": "2026-11-06",
+    "notes": "IRS worked example from Form 3921 boxes: box 3 $10, box 4 $25, box 5 100 shares; FMV of all shares $2,500, amount paid $1,000, adjustment $1,500."
+  },
+  {
+    "key": "iso.qualifying_holding_period_statute",
+    "value": {
+      "after_grant_years": 2,
+      "after_transfer_years": 1
+    },
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 422 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/422",
+    "locator": "26 U.S.C. 422(a)(1)",
+    "quote": "no disposition of such share is made by him within 2 years from the date of the granting of the option nor within 1 year after the transfer of such share to him, and",
+    "checked": "2026-11-06",
+    "notes": "The brief's wording 'more than 2 years after grant and more than 1 year after purchase' does not appear in any IRS source I opened. The statute says no disposition 'within 2 years' of grant 'nor within 1 year' of transfer; Pub 525 says the holding period is met if you 'don’t sell the stock until the end of the later of' the two periods. Use one of those two wordings (or 'not within 2 years of grant or 1 year of purchase'); the exact day-count boundary is not spelled out in the primary text I found. For ISOs the statute says 'within 2 years from the date of the granting'; for 423 it says 'within 2 years after the date of the granting'. Pub 525 (espp.qualifying_holding_period_pub525) covers both."
+  },
+  {
+    "key": "iso.limit_100000_first_exercisable_per_year",
+    "value": 100000,
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 422 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/422",
+    "locator": "26 U.S.C. 422(d)(1) and (d)(3)",
+    "quote": "To the extent that the aggregate fair market value of stock with respect to which incentive stock options (determined without regard to this subsection) are exercisable for the 1st time by any individual during any calendar year (under all plans of the individual’s employer corporation and its parent and subsidiary corporations) exceeds $100,000, such options shall be treated as options which are not incentive stock options.",
+    "checked": "2026-11-06",
+    "notes": "Value is measured at GRANT: 422(d)(3): 'For purposes of paragraph (1), the fair market value of any stock shall be determined as of the time the option with respect to such stock is granted.' Ordering rule 422(d)(2): 'Paragraph (1) shall be applied by taking options into account in the order in which they were granted.' The excess is treated as a nonstatutory option. The statute states a fixed $100,000; I saw no inflation-adjustment language in 422(d)."
+  },
+  {
+    "key": "iso.disqualifying_disposition",
+    "value": "Disqualifying disposition with a gain: ordinary income (wages) = the lesser of the gain or the spread at exercise (FMV at exercise minus option price); any excess gain is capital gain; a loss is a capital loss with no ordinary income.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Sale of the stock > ISOs > Holding period requirement not satisfied",
+    "quote": "If you sell stock acquired by exercising an ISO, don’t satisfy the holding period requirement, and have a gain from the sale, the gain is ordinary income up to the amount by which the stock’s FMV when you exercised the option exceeded the option price. Any excess gain is capital gain. If you have a loss from the sale, it’s a capital loss and you don’t have any ordinary income.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. The brief says 'a disqualifying disposition turns the spread into wages'; precisely, for an ISO it is the spread only up to the gain on the sale. Also: that income is Box 1 wages but not FICA wages and not subject to withholding (statutory_options.* entries). Basis for capital gain = amount paid + amount reported as wages."
+  },
+  {
+    "key": "iso.disqualifying_disposition_w2_and_basis",
+    "value": "Employer reports the ordinary income as wages in Box 1 of Form W-2; taxpayer reports it on Form 1040 line 1a (or Schedule 1 line 8k if not on the W-2); basis for the capital gain = amount paid + amount reported as wages.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Sale of the stock > ISOs > Holding period requirement not satisfied",
+    "quote": "In determining capital gain or loss, your basis is the amount you paid when you exercised the option plus the amount reported as wages.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. Full sentence before it: 'Your employer or former employer should report the ordinary income to you as wages in box 1 of Form W-2, and you must report this ordinary income amount on Form 1040 or 1040-SR, line 1a.'"
+  },
+  {
+    "key": "iso.example_disqualifying_disposition",
+    "value": {
+      "option_price": 10,
+      "fmv_at_exercise": 12,
+      "sale_price_per_share": 15,
+      "shares": 100,
+      "wages": 200,
+      "capital_gain": 300
+    },
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Example 8",
+    "quote": "Although you held the stock for more than a year, less than 2 years had passed from the time you were granted the option.",
+    "checked": "2026-11-06",
+    "notes": "IRS worked example: ISO granted March 12, 2023 at $10; exercised January 7, 2024 at $12; sold January 27, 2025 at $15; 100 shares. Wages $200 [($12 x 100) - $1,000]; capital gain $300 ($500 gain - $200). Shows that more than 1 year from exercise is not enough without 2 years from grant."
+  },
+  {
+    "key": "iso.disqualifying_income_year_of_sale_statute",
+    "value": "Statute: income from a disqualifying disposition is treated as income in the year of the disposition, and no withholding is required on it.",
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 421 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/421",
+    "locator": "26 U.S.C. 421(b)",
+    "quote": "then any increase in the income of such individual or deduction from the income of his employer corporation for the taxable year in which such exercise occurred attributable to such disposition, shall be treated as an increase in income or a deduction from income in the taxable year of such individual or of such employer corporation in which such disposition occurred. No amount shall be required to be deducted and withheld under chapter 24 with respect to any increase in income attributable to a disposition described in the preceding sentence.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "iso.form_3921_who_gets_one",
+    "value": "Form 3921 is filed for each transfer of stock on exercise of an ISO.",
+    "applies_to": "all years",
+    "source_title": "Instructions for Forms 3921 and 3922 (04/2025)",
+    "url": "https://www.irs.gov/instructions/i3921",
+    "locator": "Specific Instructions for Form 3921 > Who Must File",
+    "quote": "Every corporation which in any calendar year transfers to any person a share of stock pursuant to that person's exercise of an incentive stock option described in section 422(b) must, for that calendar year, file Form 3921 for each transfer made during that year.",
+    "checked": "2026-11-06",
+    "notes": "Form 3921 boxes: 1 date option granted, 2 date option exercised, 3 exercise price per share, 4 FMV per share on exercise date, 5 number of shares transferred, 6 if other than transferor, name/address/TIN of the corporation whose stock is transferred."
+  },
+  {
+    "key": "iso.form_3921_pub525",
+    "value": "Corporation must send or provide Form 3921 by January 31 following the exercise year.",
+    "applies_to": "2025 exercises (statement due January 31, 2026 per Pub 525)",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Statutory Stock Options > Alternative minimum tax (AMT), Tip after Example 7",
+    "quote": "If you exercise an ISO during 2025, you should receive Form 3921, or a statement, from the corporation for each transfer made during 2025. The corporation must send or provide you with the form by January 31, 2026.",
+    "checked": "2026-11-06",
+    "notes": "See dates.forms_3921_3922_statute and dates.forms_3921_3922_2027 for the 2026-form deadline."
+  },
+  {
+    "key": "iso.amt_credit_form_8801",
+    "value": "AMT caused by deferral items can generate a minimum tax credit on Form 8801; only the following are 'exclusion items', and the ISO line 2i adjustment is not among them, so it is a deferral item.",
+    "applies_to": "all years (2025 instructions)",
+    "source_title": "Instructions for Form 8801 (2025)",
+    "url": "https://www.irs.gov/instructions/i8801",
+    "locator": "General Instructions > Purpose of Form; line 2 instructions",
+    "quote": "The minimum tax credit is allowed only for the AMT caused by deferral items.",
+    "checked": "2026-11-06",
+    "notes": "Inference step (flag for the checker): Form 8801 line 2 says 'Exclusion items are only the following AMT adjustments and preferences: certain itemized deductions (including any investment interest expense reported on Schedule E), certain tax-exempt interest, depletion, the section 1202 exclusion, the standard deduction, and any other adjustments related to exclusion items.' The ISO adjustment (Form 6251 line 2i) is not on that list, so it falls on the deferral side. The Form 8801 instructions do not themselves mention ISOs. Optional for the one-page sheet. Also: 'Use Form 8801 if you are an individual, estate, or trust to figure the minimum tax credit, if any, for alternative minimum tax (AMT) you incurred in prior tax years and to figure any credit carryforward to 2026.'"
+  },
+  {
+    "key": "amt.exemption.single",
+    "value": 90100,
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.10 (PDF p. 16), table 'Exemption Amounts for Alternative Minimum Tax'",
+    "quote": "Unmarried Individuals (other than Surviving Spouses) $90,100",
+    "checked": "2026-11-06",
+    "notes": "Table row. Lead-in: 'For taxable years beginning in 2026, the exemption amounts under § 55(d)(1) are:'. Exemption is before the phase-out. Head of household is an 'unmarried individual', so $90,100 too."
+  },
+  {
+    "key": "amt.exemption.married_filing_jointly",
+    "value": 140200,
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.10 (PDF p. 16), table 'Exemption Amounts for Alternative Minimum Tax'",
+    "quote": "Joint Returns or Surviving Spouses $140,200",
+    "checked": "2026-11-06",
+    "notes": "Table row (also applies to qualifying surviving spouses)."
+  },
+  {
+    "key": "amt.exemption.married_filing_separately",
+    "value": 70100,
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.10 (PDF p. 16)",
+    "quote": "Married Individuals Filing Separate Returns $70,100",
+    "checked": "2026-11-06",
+    "notes": "Included for completeness."
+  },
+  {
+    "key": "amt.phaseout_threshold.single",
+    "value": 500000,
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.10 (PDF p. 17), phase-out table",
+    "quote": "Unmarried Individuals (other than $500,000 $680,200 Surviving Spouses)",
+    "checked": "2026-11-06",
+    "notes": "Table row as extracted (the label wraps across two lines): threshold phaseout amount $500,000; complete phaseout amount $680,200. Lead-in: 'For taxable years beginning in 2026, the amounts used under § 55(d)(2) to determine the phaseout of the exemption amounts are:'. CONFIRMED against the statute (next entries). Do not use the 2025 figures ($626,350 / $1,252,700) that appear in the 2025 Form 6251 instructions; see amt.2025_figures_for_contrast."
+  },
+  {
+    "key": "amt.phaseout_threshold.married_filing_jointly",
+    "value": 1000000,
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.10 (PDF p. 17), phase-out table",
+    "quote": "Joint Returns or Surviving Spouses $1,000,000 $1,280,400",
+    "checked": "2026-11-06",
+    "notes": "Table row: threshold phaseout amount $1,000,000; complete phaseout amount $1,280,400."
+  },
+  {
+    "key": "amt.phaseout_complete.single",
+    "value": 680200,
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.10 (PDF p. 17), phase-out table",
+    "quote": "Unmarried Individuals (other than $500,000 $680,200 Surviving Spouses)",
+    "checked": "2026-11-06",
+    "notes": "Exemption is zero at AMTI of $680,200 (unmarried). Consistency check I ran: $500,000 + ($90,100 / 0.50) = $680,200."
+  },
+  {
+    "key": "amt.phaseout_complete.married_filing_jointly",
+    "value": 1280400,
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.10 (PDF p. 17), phase-out table",
+    "quote": "Joint Returns or Surviving Spouses $1,000,000 $1,280,400",
+    "checked": "2026-11-06",
+    "notes": "Exemption is zero at AMTI of $1,280,400 (joint). Consistency check I ran: $1,000,000 + ($140,200 / 0.50) = $1,280,400."
+  },
+  {
+    "key": "amt.phaseout_rate",
+    "value": 0.5,
+    "applies_to": "2026 and later",
+    "source_title": "26 U.S.C. 55 (Code text as published by Cornell LII, as amended through P.L. 119-21)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/55",
+    "locator": "26 U.S.C. 55(d)(4)(A)(ii)(I)-(IV) (added by P.L. 119-21 sec. 70107(c) as to subclause (IV))",
+    "quote": "paragraph (2) shall be applied— (I) by substituting “$1,000,000” for “$150,000” in subparagraph (A), (II) by substituting “50 percent of the dollar amount applicable under subparagraph (A)” for “$112,500” in subparagraph (B), (III) in the case of a taxpayer described in paragraph (1)(D), without regard to the substitution under subclause (I), and (IV) by substituting “50 percent” for “25 percent”,",
+    "checked": "2026-11-06",
+    "notes": "Reads: the exemption is reduced by 50 percent (not the usual 25 percent) of AMTI above $1,000,000 (joint) or $500,000 (unmarried and married filing separately; $500,000 = 50 percent of $1,000,000). Base statute 55(d)(2): 'The exemption amount of any taxpayer shall be reduced (but not below zero) by an amount equal to 25 percent of the amount by which the alternative minimum taxable income of the taxpayer exceeds'. The 50 percent rate is confirmed by the arithmetic in the complete-phaseout entries. New in 2026: the 2025 phase-out rate was 25 percent."
+  },
+  {
+    "key": "amt.pl_119_21_sec_70107",
+    "value": "P.L. 119-21 sec. 70107 made the higher AMT exemptions permanent, reset the inflation base for the $1,000,000 phase-out threshold to calendar year 2025 (no indexing before 2027), and set the phase-out rate to 50 percent, for tax years beginning after December 31, 2025.",
+    "applies_to": "2026 and later",
+    "source_title": "Public Law 119-21, sec. 70107, 139 Stat. 162-163",
+    "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm",
+    "locator": "Title VII, SEC. 70107(c) and (d)",
+    "quote": "Section 55(d)(4)(A)(ii) is amended by striking ``and'' at the end of subclause (II), and by adding at the end the following new subclause: ``(IV) by substituting `50 percent' for `25 percent', and''.",
+    "checked": "2026-11-06",
+    "notes": "Effective date (70107(d)): 'The amendments made by this section shall apply to taxable years beginning after December 31, 2025.'"
+  },
+  {
+    "key": "amt.rev_proc_explains_pl_119_21_change",
+    "value": "Rev. Proc. 2025-32 says sec. 70107 made the exemption and phase-out threshold increases permanent and that the $1,000,000 amount is not adjusted for any taxable year beginning before January 1, 2027.",
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 2.07 (PDF p. 6)",
+    "quote": "Section 70107 of the OBBBA amends § 55(d)(4) to make the temporary increases of the exemption amounts and the phaseout threshold amounts that were effective for taxable years beginning after December 31, 2017, and before January 1, 2026, permanent.",
+    "checked": "2026-11-06",
+    "notes": "Next sentence: 'Section 55(d)(4)(B) as amended provides that the $1,000,000 amount described in § 55(d)(4)(A)(ii)(I) is not adjusted for inflation for any taxable year beginning before January 1, 2027.'"
+  },
+  {
+    "key": "amt.rate_26_28_and_threshold_2026",
+    "value": {
+      "rates": [
+        0.26,
+        0.28
+      ],
+      "excess_taxable_income_above_which_28pct_applies": 244500,
+      "married_filing_separately": 122250
+    },
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.10 (PDF p. 16), 'under § 55(b)(1)'",
+    "quote": "For taxable years beginning in 2026, under § 55(b)(1), the excess taxable income above which the 28 percent tax rate applies is: Filing status Excess taxable income Married Individuals Filing Separate Returns $122,250 All Other Taxpayers $244,500",
+    "checked": "2026-11-06",
+    "notes": "Statute 55(b)(1)(A): 26 percent of so much of the taxable excess as does not exceed the threshold, plus 28 percent above it (statute shows the unindexed $175,000; Rev. Proc. gives the 2026 indexed figure). https://www.law.cornell.edu/uscode/text/26/55"
+  },
+  {
+    "key": "amt.2025_figures_for_contrast",
+    "value": {
+      "2025_exemption_single": 88100,
+      "2025_exemption_mfj": 137000,
+      "2025_phaseout_threshold_single": 626350,
+      "2025_phaseout_threshold_mfj": 1252700
+    },
+    "applies_to": "2025",
+    "source_title": "Instructions for Form 6251 (2025)",
+    "url": "https://www.irs.gov/instructions/i6251",
+    "locator": "What's New (Form 6251 instructions, 2025)",
+    "quote": "Also, the amount used to determine the phaseout of your exemption has increased to $626,350 ($1,252,700 if married filing jointly or qualifying surviving spouse).",
+    "checked": "2026-11-06",
+    "notes": "FOR CONTRAST ONLY, not 2026. The 2025 exemption is $88,100 (single) / $137,000 (joint); the 2026 phase-out thresholds fall to $500,000 / $1,000,000 and the 2026 exemptions rise to $90,100 / $140,200. A cheat sheet that copies numbers from the 2025 Form 6251 instructions would be wrong for 2026."
+  },
+  {
+    "key": "nso.no_tax_at_grant_typical",
+    "value": "Typical NSO (no readily determinable value at grant): no income until the option is exercised or transferred.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Stock Options > Nonstatutory Stock Options > Option without readily determinable value",
+    "quote": "If the FMV of the option isn’t readily determinable at the time it’s granted to you (even if it’s determined later), you don’t have income until you exercise or transfer the option.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged."
+  },
+  {
+    "key": "nso.exercise_spread_is_income",
+    "value": "Nonstatutory option without a readily determinable value: at exercise, include FMV of the stock received minus the amount paid in income.",
+    "applies_to": "all years",
+    "source_title": "Topic no. 427, Stock options",
+    "url": "https://www.irs.gov/taxtopics/tc427",
+    "locator": "Non-statutory stock options > Not readily determined fair market value",
+    "quote": "For nonstatutory options without a readily determinable fair market value, there's no taxable event when the option is granted but you must include in income the fair market value of the stock received on exercise, less the amount paid, when you exercise the option.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 words the same rule through the restricted-property rules: 'The amount to include in your income is the difference between the amount you pay for the property and its FMV when it becomes substantially vested.' (if the stock is not substantially vested at exercise, income waits until it vests)."
+  },
+  {
+    "key": "nso.w2_box12_code_v_boxes_1_3_5",
+    "value": "Employer reports the NSO spread as wages on Form W-2: in boxes 1, 3 (up to the social security wage base) and 5, and in box 12 with code V.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Stock Options > Nonstatutory Stock Options > Tax form",
+    "quote": "If you have income from the exercise of nonstatutory stock options, your employer should report the amount to you in box 12 of Form W-2, with code V. The employer should show the spread (that is, the FMV of stock over the exercise price of options granted to you for that stock) from your exercise of the nonstatutory stock options. Your employer should include this amount in boxes 1, 3 (up to the social security wage base), and 5.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged."
+  },
+  {
+    "key": "nso.w2_code_v_employer_instructions",
+    "value": "Code V instruction to employers: show the spread in box 12 code V and include it in boxes 1, 3 (up to the social security wage base) and 5.",
+    "applies_to": "2026",
+    "source_title": "General Instructions for Forms W-2 and W-3 (2026)",
+    "url": "https://www.irs.gov/instructions/iw2w3",
+    "locator": "Box 12 > Code V—Income from the exercise of nonstatutory stock option(s)",
+    "quote": "Show the spread (that is, the fair market value (FMV) of stock over the exercise price of option(s) granted to your employee with respect to that stock) from your employee’s (or former employee’s) exercise of nonstatutory stock option(s). Include this amount in boxes 1, 3 (up to the social security wage base), and 5.",
+    "checked": "2026-11-06",
+    "notes": "Pub 15-B (2026) says the same: 'An employer must report the excess of the FMV of stock received upon exercise of a nonstatutory stock option over the amount paid for the stock option on Form W-2 in boxes 1, 3 (up to the social security wage base limit), and 5, and in box 12 using code V.' https://www.irs.gov/publications/p15b"
+  },
+  {
+    "key": "nso.withholding_as_supplemental_wages",
+    "value": "Income recognized on the exercise of a nonstatutory stock option is supplemental wages for income tax withholding (so the 22% optional flat rate, the aggregate method, and 37% above $1 million apply).",
+    "applies_to": "all years",
+    "source_title": "26 CFR 31.3402(g)-1(a)(1)(i) (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-26/section-31.3402(g)-1",
+    "locator": "26 CFR 31.3402(g)-1(a)(1)(i)",
+    "quote": "income recognized on the exercise of a nonstatutory stock option,",
+    "checked": "2026-11-06",
+    "notes": "DIFFERS FROM THE BRIEF: Pub 525 does NOT say NSO spread is withheld like other supplemental wages; I searched it. The primary source is this regulation (exact fragment above; the full sentence is quoted in fed.supplemental.nso_and_restricted_property_are_supplemental_wages). Because it is supplemental wages, the optional 22% rate needs the conditions in fed.supplemental.optional_flat_rate_conditions. Nothing in the IRS texts I read says the withheld amount equals the tax owed; withholding is a prepayment."
+  },
+  {
+    "key": "nso.no_special_rules_on_later_sale_and_basis",
+    "value": "Basis = amount paid + amount included in income; later sale is an ordinary capital transaction; holding period starts on the exercise date (if the option had no readily determinable value).",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Stock Options > Nonstatutory Stock Options > Sale of the stock",
+    "quote": "Your basis in the property you acquire under the option is the amount you pay for it plus any amount you included in income upon grant or exercise of the option.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. Same section: 'There are no special income rules for the sale of stock acquired through the exercise of a nonstatutory stock option.' and 'Your holding period begins as of the date you acquired the option, if it had a readily determinable value, or as of the date you exercised or transferred the option if it had no readily determinable value.'"
+  },
+  {
+    "key": "nso.form_1099b_basis_does_not_include_exercise_income",
+    "value": "For options granted on or after January 1, 2014, the Form 1099-B basis won't reflect the amount included in income at exercise; the taxpayer adjusts it on Form 8949.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Stock Options > Nonstatutory Stock Options > Sale of the stock",
+    "quote": "For options granted on or after January 1, 2014, the basis information reported to you on Form 1099-B won’t reflect any amount you included in income upon grant or exercise of the option.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. Next lines: 'It’s your responsibility to make any appropriate adjustments to the basis information reported on Form 1099-B by completing Form 8949.' The identical sentence appears for ISO/ESPP sales (Statutory Stock Options > Sale of the stock). This is the strongest IRS-stated source for the 1099-B basis trap (options and ESPP/ISO); for RSUs see rsu.form1099b_basis_may_exclude_compensation_income."
+  },
+  {
+    "key": "s83b.deadline_30_days",
+    "value": 30,
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 83 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/83",
+    "locator": "26 U.S.C. 83(b)(2)",
+    "quote": "An election under paragraph (1) with respect to any transfer of property shall be made in such manner as the Secretary prescribes and shall be made not later than 30 days after the date of such transfer.",
+    "checked": "2026-11-06",
+    "notes": "Value = days after the date of the transfer."
+  },
+  {
+    "key": "s83b.deadline_30_days_form_15620",
+    "value": 30,
+    "applies_to": "all years",
+    "source_title": "Form 15620 (Rev. 4-2025), Section 83(b) Election, with Instructions",
+    "url": "https://www.irs.gov/pub/irs-pdf/f15620.pdf",
+    "locator": "Instructions page 2, 'When to File'",
+    "quote": "An 83(b) election must be filed no later than 30 days after the date the property was transferred.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (Restricted Property > How to make the choice) says the same."
+  },
+  {
+    "key": "s83b.weekend_holiday_rule",
+    "value": "If day 30 falls on a Saturday, Sunday or legal holiday, the election is timely if postmarked by the next day that is not one.",
+    "applies_to": "all years",
+    "source_title": "Form 15620 (Rev. 4-2025), Section 83(b) Election, with Instructions",
+    "url": "https://www.irs.gov/pub/irs-pdf/f15620.pdf",
+    "locator": "Instructions page 2, 'When to File'",
+    "quote": "In accordance with IRC § 7503, if the thirtieth day following the transfer of property falls on a Saturday, Sunday or legal holiday, the election will be considered timely filed if it is postmarked by the next succeeding day which is not a Saturday, Sunday or legal holiday.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "s83b.form_15620_or_written_statement",
+    "value": "The election is made on Form 15620 or by a written statement meeting Treas. Reg. 1.83-2; the form is voluntary; it is mailed to the IRS office where the person files their return and a copy goes to the employer.",
+    "applies_to": "all years",
+    "source_title": "Form 15620 (Rev. 4-2025), Section 83(b) Election, with Instructions",
+    "url": "https://www.irs.gov/pub/irs-pdf/f15620.pdf",
+    "locator": "Instructions page 2, 'Who May File'",
+    "quote": "In the alternative, an 83(b) election may be made by filing a written statement that satisfies the requirements of Treas. Reg. § 1.83-2.",
+    "checked": "2026-11-06",
+    "notes": "Form 15620 is dated April 2025 (Rev. 4-2025). Other quotes: 'Submit this completed and signed Form 15620 to the IRS via mail with the IRS office with which the person who performs the services files a federal income tax return.' (Where to File); 'The person who performs the services is also required to submit a copy of the completed and signed Form 15620 to the person for whom the services are performed.' (Additional Copies); 'Form 15620 is provided by the IRS for your convenience and its use is voluntary.' (Privacy Act notice). I found no statement in these documents that the election can be e-filed; do not claim it."
+  },
+  {
+    "key": "s83b.cannot_be_revoked_without_irs_consent",
+    "value": "An 83(b) election cannot be revoked without the IRS's consent.",
+    "applies_to": "all years",
+    "source_title": "Form 15620 (Rev. 4-2025), Section 83(b) Election, with Instructions",
+    "url": "https://www.irs.gov/pub/irs-pdf/f15620.pdf",
+    "locator": "Instructions page 2, 'Revocation of an 83(b) Election'",
+    "quote": "An 83(b) election may not be revoked except with the consent of the IRS.",
+    "checked": "2026-11-06",
+    "notes": "Statute: IRC 83(b)(2), 'Such election may not be revoked except with the consent of the Secretary.' Form 15620 points to Treas. Reg. 1.83-2(f) and Rev. Proc. 2006-31."
+  },
+  {
+    "key": "s83b.revocation_consent_standard",
+    "value": "Consent is granted only for a mistake of fact as to the underlying transaction requested within 60 days of discovering it; and generally if the revocation request is filed on or before the original 30-day due date.",
+    "applies_to": "all years",
+    "source_title": "Rev. Proc. 2006-31",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-06-31.pdf",
+    "locator": "Section 2.04 and Section 2.08; Section 5, Example 2",
+    "quote": "Accordingly, a request for consent to revoke a § 83(b) election will generally be granted if the request is filed on or before the due date for making that § 83(b) election.",
+    "checked": "2026-11-06",
+    "notes": "DIFFERS FROM PUB 525: Pub 525 says 'Consent will be given only if you were under a mistake of fact as to the underlying transaction' and omits the within-the-30-days route. Rev. Proc. 2006-31 sec. 2.04: consent 'will only be granted where the person filing the election is under a mistake of fact as to the underlying transaction and must be requested within 60 days of the date on which the mistake of fact first became known'; sec. 2.04 also says 'Neither a mistake as to the value (or decline in the value) of the property for which the election was made nor the failure of anyone to perform an act that was contemplated at the time of transfer of the property constitute a mistake of fact'; sec. 2.07: 'The failure of a service provider to understand the tax consequences of making an election under § 83(b) is not a mistake of fact'. A cheat sheet that says 'irrevocable' is slightly too strong; 'can't be revoked without IRS consent, which is granted only in narrow cases' is supported."
+  },
+  {
+    "key": "s83b.pub525_revocation_caution",
+    "value": "Pub 525: if you make the choice you can't revoke it without IRS consent; consent only for a mistake of fact.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Restricted Property > Choosing to include in income for year of transfer > Caution",
+    "quote": "If you make this choice, you can’t revoke it without the consent of the IRS. Consent will be given only if you were under a mistake of fact as to the underlying transaction.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. See s83b.revocation_consent_standard for Rev. Proc. 2006-31, which is more complete."
+  },
+  {
+    "key": "s83b.effect_of_election",
+    "value": "With a valid election, the substantial-vesting rules don't apply and later appreciation generally isn't compensation; if the property is later forfeited, no deduction is allowed for the amount included.",
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 83 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/83",
+    "locator": "26 U.S.C. 83(b)(1), last sentence",
+    "quote": "If such election is made, subsection (a) shall not apply with respect to the transfer of such property, and if such property is subsequently forfeited, no deduction shall be allowed in respect of such forfeiture.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "s83b.pub525_effect_and_forfeiture",
+    "value": "Pub 525: with the choice, the substantial vesting rules don't apply and later appreciation generally isn't compensation; basis is the amount paid plus the amount included in income; a forfeiture loss is the amount paid minus any amount realized.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Restricted Property > Choosing to include in income for year of transfer",
+    "quote": "If you make this choice, the substantial vesting rules don’t apply and, generally, any later appreciation in value isn’t included in your compensation when the property becomes substantially vested.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged. Same section: 'If you forfeit the property after you have included its value in income, your loss is the amount you paid for the property minus any amount you realized on the forfeiture.'"
+  },
+  {
+    "key": "s83b.not_available_for_stock_options",
+    "value": "No 83(b) election for a statutory or nonstatutory stock option.",
+    "applies_to": "all years",
+    "source_title": "Publication 525 (2025), Taxable and Nontaxable Income",
+    "url": "https://www.irs.gov/publications/p525",
+    "locator": "Restricted Property > Choosing to include in income for year of transfer",
+    "quote": "You can’t make this choice for a statutory or nonstatutory stock option.",
+    "checked": "2026-11-06",
+    "notes": "Pub 525 (2025) is the latest edition (for 2025 returns); the 2026 edition is not published yet. The statutory rule behind it is unchanged."
+  },
+  {
+    "key": "s83b.not_available_for_rsu_grant",
+    "value": "No 83(b) election can be made on the grant of an RSU because no property is transferred at grant.",
+    "applies_to": "all years",
+    "source_title": "IRS video text script: U.S. taxation of stock-based compensation received by nonresident aliens",
+    "url": "https://www.irs.gov/newsroom/us-taxation-of-stock-based-compensation-received-by-nonresident-aliens-youtube-video-text-script",
+    "locator": "RSU taxation slide narration",
+    "quote": "At Grant RSUs are not considered property for purposes of IRC section 83 since no actual property has been transferred, therefore, no IRC section 83(b) election can be made with respect to the grant of an RSU.",
+    "checked": "2026-11-06",
+    "notes": "IRS outreach material, not a publication or ruling. Optional for the one-page sheet."
+  },
+  {
+    "key": "dates.form_w2_to_employees_for_2026",
+    "value": "2027-02-01",
+    "applies_to": "tax year 2026 (statements furnished in 2027)",
+    "source_title": "General Instructions for Forms W-2 and W-3 (2026)",
+    "url": "https://www.irs.gov/instructions/iw2w3",
+    "locator": "Furnishing Copies B, C, and 2 to employees",
+    "quote": "Generally, you must furnish Copies B, C, and 2 of Form W-2 to your employees by February 1, 2027.",
+    "checked": "2026-11-06",
+    "notes": "January 31, 2027 is a Sunday, so the January 31 date rolls to Monday February 1, 2027 (IRC 7503). Also: the same instructions give February 1, 2027 as the due date for filing 2026 Forms W-2 with the SSA."
+  },
+  {
+    "key": "dates.forms_3921_3922_statute",
+    "value": "January 31 of the year after the exercise/transfer year",
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 6039(b) (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/6039",
+    "locator": "26 U.S.C. 6039(b)",
+    "quote": "The written statement required under the preceding sentence shall be furnished to such person on or before January 31 of the year following the calendar year for which the return under subsection (a) was made.",
+    "checked": "2026-11-06",
+    "notes": "Subsection (a)(1) covers ISO exercises (Form 3921); (a)(2) covers transfers of legal title of ESPP stock for options described in section 423(c) (Form 3922)."
+  },
+  {
+    "key": "dates.forms_3921_3922_actual_2025_forms",
+    "value": "2026-02-02",
+    "applies_to": "tax year 2025 (statements furnished in 2026)",
+    "source_title": "General Instructions for Certain Information Returns (2025), part M",
+    "url": "https://www.irs.gov/instructions/i1099gi",
+    "locator": "Part M, Rules for furnishing statements > When to furnish forms or statements",
+    "quote": "Generally, you must furnish Forms 1098, 1099, 3921, 3922, and W-2G information by February 2, 2026.",
+    "checked": "2026-11-06",
+    "notes": "Shows the weekend roll in practice: January 31, 2026 was a Saturday, so the due date was Monday February 2, 2026. This is the 2025 edition of the General Instructions; the 2026 edition (for forms furnished in 2027) is not posted yet."
+  },
+  {
+    "key": "dates.forms_3921_3922_for_2026_derived",
+    "value": "2027-02-01 (derived)",
+    "applies_to": "tax year 2026 (statements furnished in 2027)",
+    "source_title": "26 U.S.C. 7503 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/7503",
+    "locator": "26 U.S.C. 7503",
+    "quote": "When the last day prescribed under authority of the internal revenue laws for performing any act falls on Saturday, Sunday, or a legal holiday, the performance of such act shall be considered timely if it is performed on the next succeeding day which is not a Saturday, Sunday, or a legal holiday.",
+    "checked": "2026-11-06",
+    "notes": "DERIVED, NOT PUBLISHED: no IRS document I could open yet states the 2027 date for Forms 3921/3922. Derivation: statute says January 31 (entry above); January 31, 2027 is a Sunday (calendar check); next business day is Monday February 1, 2027; consistent with the 2026 W-2/W-3 instructions, which give February 1, 2027 for Form W-2. Re-check against the 2026 General Instructions for Certain Information Returns when posted."
+  },
+  {
+    "key": "dates.form_1099b_to_customers_statute",
+    "value": "February 15 of the following calendar year",
+    "applies_to": "all years",
+    "source_title": "26 CFR 1.6045-1(k)(2) (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-26/section-1.6045-1",
+    "locator": "26 CFR 1.6045-1(k)(2), Time for furnishing statements",
+    "quote": "however, all statements required to be furnished under this paragraph (k) for a calendar year must be furnished on or before February 15 of the following calendar year.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "dates.form_1099b_actual_2025_forms",
+    "value": "2026-02-17",
+    "applies_to": "tax year 2025 (statements furnished in 2026)",
+    "source_title": "General Instructions for Certain Information Returns (2025), part M",
+    "url": "https://www.irs.gov/instructions/i1099gi",
+    "locator": "Part M, Rules for furnishing statements > When to furnish forms or statements",
+    "quote": "Forms 1099-B, 1099-DA, 1099-S, and 1099-MISC (if you are reporting payments in only box 8 or 10) must be furnished by February 17, 2026.",
+    "checked": "2026-11-06",
+    "notes": "February 15, 2026 was a Sunday and February 16, 2026 was Washington's Birthday, hence February 17. 2025 edition of the General Instructions."
+  },
+  {
+    "key": "dates.form_1099b_for_2026_derived",
+    "value": "2027-02-16 (derived)",
+    "applies_to": "tax year 2026 (statements furnished in 2027)",
+    "source_title": "5 U.S.C. 6103(a), legal public holidays (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/5/6103",
+    "locator": "5 U.S.C. 6103(a)",
+    "quote": "Washington’s Birthday, the third Monday in February.",
+    "checked": "2026-11-06",
+    "notes": "DERIVED, NOT PUBLISHED: Regulation date is February 15, 2027 (previous entry); February 15, 2027 is a Monday and the third Monday of February 2027 (calendar check: Mondays are Feb 1, 8, 15), i.e. Washington's Birthday, a legal holiday; IRC 7503 (see dates.forms_3921_3922_for_2026_derived) moves the date to Tuesday February 16, 2027. Re-check against the 2026 General Instructions for Certain Information Returns when posted. A reader's broker may send consolidated statements earlier or later within that limit."
+  },
+  {
+    "key": "dates.estimated_tax_fourth_installment_for_2026",
+    "value": "2027-01-15",
+    "applies_to": "tax year 2026",
+    "source_title": "Form 1040-ES (2026), Estimated Tax for Individuals",
+    "url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+    "locator": "When To Pay Estimated Tax schedule: '4th payment . . . Jan. 15, 2027*' (page 4) and the Payment Voucher schedule",
+    "quote": "* You don’t have to make the payment due January 15, 2027, if you file your 2026 tax return by February 1, 2027, and pay the entire balance due with your return.",
+    "checked": "2026-11-06",
+    "notes": "Does the date move for a weekend? No: January 15, 2027 is a Friday (calendar check) and not a legal holiday (Martin Luther King Jr. Day is Monday January 18, 2027 per 5 U.S.C. 6103(a): 'Birthday of Martin Luther King, Jr., the third Monday in January.'), so IRC 7503 does not move it. The 2026 Form 1040-ES is published (title 'Form 1040-ES (2026)')."
+  },
+  {
+    "key": "dates.estimated_tax_fourth_installment_statute",
+    "value": "January 15 of the following taxable year",
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 6654(c)(2) (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/6654",
+    "locator": "26 U.S.C. 6654(c)(2) table, 4th required installment (1st April 15, 2nd June 15, 3rd September 15)",
+    "quote": "January 15 of the following taxable year.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "cg.long_term_holding_period",
+    "value": "more than 1 year",
+    "applies_to": "all years",
+    "source_title": "26 U.S.C. 1222(3) (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1222",
+    "locator": "26 U.S.C. 1222(3)",
+    "quote": "The term “long-term capital gain” means gain from the sale or exchange of a capital asset held for more than 1 year, if and to the extent such gain is taken into account in computing gross income.",
+    "checked": "2026-11-06",
+    "notes": "Short-term: held for not more than 1 year (1222(1))."
+  },
+  {
+    "key": "cg.long_term_holding_period_pub550",
+    "value": "more than 1 year = long-term; 1 year or less = short-term; counting starts the day after acquisition and the day of sale counts.",
+    "applies_to": "all years (2025 edition)",
+    "source_title": "Publication 550 (2025), Investment Income and Expenses",
+    "url": "https://www.irs.gov/publications/p550",
+    "locator": "Chapter 4, Holding Period > Long-term or Short-term",
+    "quote": "If you hold investment property more than 1 year, any capital gain or loss is a long-term capital gain or loss. If you hold the property 1 year or less, any capital gain or loss is a short-term capital gain or loss.",
+    "checked": "2026-11-06",
+    "notes": "Next sentences: 'To determine how long you held the investment property, begin counting on the date after the day you acquired the property. The day you disposed of the property is part of your holding period.' Example: bought January 31, 2024, sold January 29, 2025 = not more than 1 year; sold February 6, 2025 = more than 1 year."
+  },
+  {
+    "key": "cg.short_term_taxed_as_ordinary_income",
+    "value": "Net short-term capital gains are taxed as ordinary income at graduated rates.",
+    "applies_to": "all years",
+    "source_title": "Topic no. 409, Capital gains and losses",
+    "url": "https://www.irs.gov/taxtopics/tc409",
+    "locator": "Capital gains tax rates (note at end)",
+    "quote": "Note: Net short-term capital gains are subject to taxation as ordinary income at graduated tax rates.",
+    "checked": "2026-11-06",
+    "notes": ""
+  },
+  {
+    "key": "cg.long_term_rates_structure",
+    "value": {
+      "rates": [
+        0,
+        0.15,
+        0.2
+      ]
+    },
+    "applies_to": "all years",
+    "source_title": "Topic no. 409, Capital gains and losses",
+    "url": "https://www.irs.gov/taxtopics/tc409",
+    "locator": "Capital gains tax rates",
+    "quote": "However, a capital gains rate of 20% applies to the extent that your taxable income exceeds the thresholds set for the 15% capital gain rate.",
+    "checked": "2026-11-06",
+    "notes": "The page's dollar thresholds are for tax year 2025 ($48,350 / $96,700 etc.); use the 2026 thresholds in the next entry. Exceptions in Topic 409: 28% for collectibles and section 1202 stock, 25% for unrecaptured section 1250 gain. The Topic 409 sentence 'the tax rate on most net capital gain is no higher than 15% for most individuals' is a simplification."
+  },
+  {
+    "key": "cg.long_term_rate_breakpoints_2026",
+    "value": {
+      "zero_rate_up_to_taxable_income": {
+        "single": 49450,
+        "married_filing_jointly": 98900,
+        "head_of_household": 66200,
+        "married_filing_separately": 49450
+      },
+      "fifteen_rate_up_to_taxable_income": {
+        "single": 545500,
+        "married_filing_jointly": 613700,
+        "head_of_household": 579600,
+        "married_filing_separately": 306850
+      }
+    },
+    "applies_to": "2026",
+    "source_title": "Rev. Proc. 2025-32, 2025-45 I.R.B. 695",
+    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+    "locator": "Section 4.03 Maximum Capital Gains Rate (PDF p. 13)",
+    "quote": "For taxable years beginning in 2026, the maximum zero rate amounts and maximum 15 percent rate amounts under § 1(j)(5)(B), as adjusted for inflation, are as follows:",
+    "checked": "2026-11-06",
+    "notes": "Table rows as printed (columns: Maximum Zero Rate Amount, Maximum 15% Rate Amount): Married Individuals Filing Joint Returns and Surviving Spouse $98,900 $613,700; Married Individuals Filing Separate Returns $49,450 $306,850; Heads of Household $66,200 $579,600; All Other Individuals $49,450 $545,500; Estates and Trusts $3,300 $16,250. 'All Other Individuals' is single. The 20 percent rate applies to the extent taxable income exceeds the 15 percent amount (Topic 409 above; IRC 1(h)(1)(D)). Optional for the one-page sheet."
+  },
+  {
+    "key": "cg.net_investment_income_tax_rate_and_thresholds",
+    "value": {
+      "rate": 0.038,
+      "thresholds_magi": {
+        "married_filing_jointly": 250000,
+        "married_filing_separately": 125000,
+        "other": 200000
+      }
+    },
+    "applies_to": "all years (statutory amounts)",
+    "source_title": "26 U.S.C. 1411 (Code text as published by Cornell LII)",
+    "url": "https://www.law.cornell.edu/uscode/text/26/1411",
+    "locator": "26 U.S.C. 1411(a)(1), (b), (c)(1)(A)(iii)",
+    "quote": "there is hereby imposed (in addition to any other tax imposed by this subtitle) for each taxable year a tax equal to 3.8 percent of the lesser of— (A) net investment income for such taxable year, or (B) the excess (if any) of— (i) the modified adjusted gross income for such taxable year, over (ii) the threshold amount.",
+    "checked": "2026-11-06",
+    "notes": "Threshold amount (1411(b)): '$250,000' for a joint return or surviving spouse; '1/2' of that for married filing separately; '$200,000' in any other case (text: 'in the case of a taxpayer making a joint return under section 6013 or a surviving spouse (as defined in section 2(a)), $250,000, ... in any other case, $200,000.'). Net investment income includes 'net gain ... attributable to the disposition of property' (1411(c)(1)(A)(iii)), i.e. gains on selling the shares. Instructions for Form 8960 (2025) list the same thresholds ('Married filing jointly or Qualifying surviving spouse is $250,000. Married filing separately is $125,000. Single or Head of household is $200,000.'). Added because a one-page sheet on stock pay's capital-gain side usually needs it; optional."
+  },
+  {
+    "key": "open.ssa_web_announcement",
+    "value": "not opened",
+    "applies_to": "2026",
+    "source_title": "SSA, Contribution and Benefit Base page / 2026 COLA fact sheet",
+    "url": "https://www.ssa.gov/oact/cola/cbb.html",
+    "locator": "n/a",
+    "quote": "",
+    "checked": "2026-11-06",
+    "notes": "ssa.gov (both /oact/cola/cbb.html and /news/en/cola/factsheets/2026.html) returned HTTP 403 Access Denied to all automated requests. The $184,500 wage base is sourced instead to SSA's own Federal Register notice (90 FR 49047) and IRS Pub 15 (2026)."
+  },
+  {
+    "key": "open.rsu_1099b_basis_often_wrong",
+    "value": "not sourced",
+    "applies_to": "all years",
+    "source_title": "n/a",
+    "url": "",
+    "locator": "n/a",
+    "quote": "",
+    "checked": "2026-11-06",
+    "notes": "The brief says Form 1099-B 'often' shows a basis that needs adjusting. IRS texts say what brokers may not do (1099-B instructions; Reg. 1.6045-1(d)(6)(ii)(A)) and, for options/ESPP/ISO, that the 1099-B basis 'won't reflect' income included at exercise (Pub 525). I found no IRS statement about how often it is wrong for RSUs, and the Form 8949 instructions never mention RSUs. Suggest 'may need adjusting'."
+  },
+  {
+    "key": "open.holding_period_more_than_wording",
+    "value": "differs",
+    "applies_to": "all years",
+    "source_title": "n/a",
+    "url": "",
+    "locator": "n/a",
+    "quote": "",
+    "checked": "2026-11-06",
+    "notes": "No IRS source I opened says 'more than 2 years after grant and more than 1 year after purchase' for ISOs/ESPPs. Statute: no disposition 'within 2 years' of grant nor 'within 1 year' of transfer. Pub 525: not sold until 'the end of the later of' the 1-year and 2-year periods. See espp.qualifying_holding_period_statute. By contrast the capital-gain test really is 'more than 1 year' (IRC 1222(3))."
+  },
+  {
+    "key": "open.2026_editions_not_yet_published",
+    "value": "not published",
+    "applies_to": "2026",
+    "source_title": "n/a",
+    "url": "",
+    "locator": "n/a",
+    "quote": "",
+    "checked": "2026-11-06",
+    "notes": "Not yet available as of 2026-11-06 (latest used): Publication 525 (2025 edition; for 2025 returns); Instructions for Form 6251 (2025); Instructions for Form 8949 (2025); Instructions for Form 8801 (2025); Instructions for Form 8959 (2025); Publication 550 (2025); Topic no. 409 figures (tax year 2025); General Instructions for Certain Information Returns (2025 edition, so the 2027 due dates for Forms 3921, 3922 and 1099-B are derived). Published for 2026: Publication 15 (2026), Publication 15-B (2026), Instructions for Form 1099-B (2026), General Instructions for Forms W-2 and W-3 (2026), Form 1040-ES (2026), Form 3922 and Form 15620 (current revisions), Rev. Proc. 2025-32."
+  }
+]

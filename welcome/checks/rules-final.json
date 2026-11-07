@@ -1,0 +1,91 @@
+{
+ "lens": "rules",
+ "pieces": ["site/privacy.md", "welcome/paid.md"],
+ "verdict": "fail",
+ "findings": [
+  {
+   "severity": "blocking",
+   "where": "site/privacy.md, The newsletter, paragraph 2 (\"Substack's policy says it also collects billing details. We never see your card number.\") and Who gets your information",
+   "what": "Bus. & Prof. Code 22575(b)(1) requires the categories of personal information the operator collects. For people who pay, the page implies the publisher sees no billing data (only Substack 'collects' it, and 'we never see your card number'). In fact Stripe shares an end customer's name, email and billing address with the business that uses it, and Substack says billing address and country live in the publisher's own Stripe account, where the publisher looks them up by subscriber email; the card brand and last four digits are visible there too. A payer reading this page would believe the publisher holds only an email address and payment status, and would not know the publisher can see their billing address.",
+   "evidence": "Stripe privacy policy, https://stripe.com/privacy, End Customer sections: Transaction Data may include 'your name, email address, contact number, billing and shipping address' and 'We share End Customers' Personal Data with their respective Business Users'. Substack support, 'How do I find the billing country of a paid subscriber?' (https://support.substack.com/hc/en-us/articles/51477875051668): Substack does not collect or display billing addresses on the publication dashboard, only Stripe retains them, and the publisher finds them by searching the subscriber's email in Stripe. (support.substack.com returned 403 to my fetches, so I read this article through search excerpts of it, not the page itself.) Substack's IAP FAQ, https://on.substack.com/p/in-app-payments-iap-faq: for iPhone-app payers the publisher receives the email address but 'details like payment method aren't shared'. Statute text read from FindLaw and California Public Law copies of 22575 because leginfo returned 403.",
+   "fix": "Replace the two sentences with something like: 'If you pay on the web, Stripe processes the payment and passes us your name, email address, billing country or address, the card's brand and last four digits, and your payment history. We never see the full card number. If you pay in Substack's iPhone app, Apple processes the payment and we get your email address and payment history, but not your payment method.' Confirm each item by opening a test purchase in the publisher's own Stripe dashboard before publishing, and add the same items to the 'Who gets your information' list."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, Email you send us (\"processed by Anthropic's Claude service under Anthropic's terms\"); also The newsletter (Apple) and Who gets your information",
+   "what": "True but incomplete. Anthropic's terms depend on the plan the agents run under. Consumer plans (Free, Pro, Max, Ultra): data may be used to train models if the setting is on, kept 5 years if allowed, 30 days if not. Commercial plans (Team, Enterprise, API): no training on prompts, 30-day retention. Reader mail contains other people's email addresses and whatever they write, and the page is where a reader decides whether to write. The page also gives no retention period for the publisher's own mail folder, and links Substack and Stripe policies but neither Anthropic's nor Apple's. If the agents run on a consumer plan with training allowed, the page understates what happens to a reader's message and this becomes blocking.",
+   "evidence": "https://code.claude.com/docs/en/data-usage (Data training policy and Data retention sections); https://www.anthropic.com/legal/privacy (Inputs and Outputs may be used to train for consumer products; personal data a user includes in Inputs is collected). Apple: Substack IAP FAQ, https://on.substack.com/p/in-app-payments-iap-faq (Apple handles IAP billing).",
+   "fix": "Check which plan the agents use and whether training is off, then say it in one sentence: 'Anthropic keeps it for up to 30 days and does not train on it' (or what is true). Link Anthropic's privacy policy and Apple's, and say how long the publisher keeps mail ('until the question is answered and any correction is made, then deleted within N months')."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, Who gets your information, last clause (\"we never ask for your income, holdings or tax details\")",
+   "what": "Read literally it is false: every calculator asks for income and often holdings. The intended meaning is that the publisher never receives them. A reader who sees the calculators ask for income and then reads this may distrust the page.",
+   "evidence": "Plan: calculators run on 'their own numbers'; this page's own The calculators section says what you type stays on your device.",
+   "fix": "'we never receive your income, holdings or tax details: what you type into a calculator stays on your device.'"
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, Your choices (Do Not Track bullet) and The newsletter, last paragraph",
+   "what": "Two statutory disclosures are met only by implication. 22575(b)(5): the bullet says there is 'nothing to switch off' but never says how the site responds to a Do Not Track signal, and does not define the term. 22575(b)(6): the page says Substack uses cookies 'some set by third parties', but Substack's policy says those third-party tracking cookies are ones Creators choose to set; the page does not say whether the publisher has turned any on (Substack lets a publication add analytics or ad-platform tracking).",
+   "evidence": "Statute (b)(5) 'Disclose how the operator responds to Web browser \"do not track\" signals', (b)(6) 'Disclose whether other parties may collect personally identifiable information' (FindLaw and California Public Law copies of 22575). Substack privacy policy, https://substack.com/privacy: 'Creators on Substack may choose to set certain tracking and analytics cookies... may include cookies set by third parties such as Twitter, Facebook, Google, AdQuick, and Parse.ly'; 'Our services do not support Do Not Track requests at this time'.",
+   "fix": "Do Not Track bullet: 'Do Not Track is a browser setting that asks sites not to track you. This site does not track visitors, so it responds the same way whether or not the signal is on; Substack does not support it.' Add to the newsletter paragraph: 'We have not turned on any advertising or analytics tracking on our Substack' (only if true; otherwise list what is on)."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, This site (\"GitHub's privacy statement covers that\")",
+   "what": "Claims more than GitHub says. GitHub's Pages documentation says the visitor's IP address is logged and stored for security purposes regardless of sign-in, and refers to the privacy statement for its security practices; the privacy statement itself never mentions Pages, and whether it covers visitors who are not GitHub users is not stated.",
+   "evidence": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages, 'Data collection'; https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement (no mention of Pages). Headers of three live github.io sites carried no Set-Cookie, consistent with 'sets no cookies'.",
+   "fix": "'GitHub's documentation says it logs each visitor's IP address for security, whether or not they use GitHub; see GitHub's privacy statement for how it handles that data.'"
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, What doesn't change, \"Your membership renews automatically until you cancel.\"",
+   "what": "States renewal without the term or the price. This email is one the member keeps, and California's automatic renewal law (Bus. & Prof. Code 17601-17602, amended effective July 1, 2025) expects the acknowledgment to carry the renewal terms, price and how to cancel; the house rule asks for price and date at checkout and in the receipt, which the publisher's own note says is still to be tested. Also untrue for anyone who did not pay by card: a comp (the free year promised for reporting an error) or a gift does not renew, and it is not established whether Substack sends this email to them.",
+   "evidence": "house-rules.md, Site and email, fourth bullet; law-firm summaries of AB 2863 (btlaw.com, 2025) say yearly reminders must give frequency, charge and how to cancel. Substack help on welcome emails says the paid welcome goes to readers who subscribe to a paid plan; it does not say whether comps or gifts get it. I could not read Bus. & Prof. Code 17602 itself (leginfo 403).",
+   "fix": "'Your membership renews every year at {{renewal_price}} on {{renewal_rule}} until you cancel.' Founding variant: '$90 a year for as long as you stay.' After the test purchase, check that comp and gift recipients do not get this email, or add a comp-safe version."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, subject line and first paragraph (\"Welcome to the paid edition\", \"Thank you for joining the paid edition\") against \"What you get\" (\"planned to open on March 30, 2027\")",
+   "what": "Founding members who buy from January 5 are welcomed to an edition that does not exist until March 30, and the email does not say what happens if it does not open (plan: rethink if fewer than 30 sell by March 23). The publisher's HTML note flags the second point as a decision still to make. A buyer's reasonable question, 'do I get my money back if it never opens', is unanswered in the one email they keep.",
+   "evidence": "plan.md, The calendar (founding memberships January 5; paid edition opens March 30; rethink if fewer than thirty by March 23); schedule.json issue 13, 2027-03-30 (a Tuesday); issue 15, 2027-04-13 is the first paid issue.",
+   "fix": "For the founding version, subject 'Welcome, founding member'; first paragraph 'Thank you for joining before the paid edition opens'; add the publisher's decision on what happens if it does not open (refund or not) once made."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, Where the downloads are (\"attached to its post on Substack, in the part for paid members\")",
+   "what": "Substack supports XLSX file embeds, but the Substack pages I could reach do not say a file placed below the paywall is gated to paid members at the file's own link. If it is not, a spreadsheet described as for paid members could be fetched without paying, and the email would be describing a gate that is not there.",
+   "evidence": "https://on.substack.com/p/new-tools-paywall-embeds: 'embed PDFs, Excel spreadsheets (XLSX)... appear as downloadable file attachments'; the page does not connect embeds to the paywall. Substack support article 'How can I attach a file to my Substack post?' (403 to my fetch; supported types read from a search excerpt: EPUB, PRC, XLSX, PDF, CBR, CBZ, KFX, KPF, ODS).",
+   "fix": "Test with a free account before January 5: open a members-only draft with the attachment and try the file's direct link while signed out. If it opens, say 'in the members' part of the post' only, or deliver the file another way."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, What doesn't change (links)",
+   "what": "The free welcome, the Start here post and the About page each link the privacy page next to the disclaimer; this email, the one sent when payment details have just been collected, links only the disclaimer.",
+   "evidence": "welcome/free.md, welcome/start-here.md and welcome/about.md carry '[privacy]({{site_url}}/privacy/)'.",
+   "fix": "Add '[privacy]({{site_url}}/privacy/)' beside the disclaimer link."
+  }
+ ],
+ "verified": [
+  "House rules 1 to 6 against welcome/paid.md: no instruction to the reader about shares, options, money or a job; no pick or ranking; no company or fund named as something to buy or use (Substack, GitHub and Apple appear only as the publisher's platforms and where to cancel); no forecast; no other-law interpretation; no filled-in paperwork, no credential claimed, no invented person; the checklist is described as 'questions'",
+  "House rules 1 to 6 against site/privacy.md: no advice, picks or forecasts; reader mail section tells readers not to send figures (rule 1, 6), uses a question in an issue only with permission and identifying details removed, and keeps a name out of public without written permission (rule 6); AI involvement disclosed (rule 5)",
+  "welcome/paid.md AI and fictional-example disclosures: 'AI agents research, write and check each paid issue' and 'fictional examples, not tax, investment or legal advice' match the house rules' footer wording",
+  "welcome/paid.md paid-edition facts against plan.md and schedule.json: opens March 30, 2027 (a Tuesday, issue 13); two Tuesdays per topic from April (issue 14 free April 6, issue 15 paid April 13); help tied to a deadline stays free; ten or more scenarios; checklist; multi-year plans, encrypted saved scenarios on the reader's device, vesting and deadline calendar; code public on GitHub; calculators run in the browser",
+  "welcome/paid.md length about 340 words of reader text (note excluded), under 400",
+  "Cancel claim: Substack lets readers cancel in their web settings (substack.com/settings, Manage subscription) and says iOS-app subscribers must cancel through the Apple App Store (Substack help, read through search excerpts)",
+  "Apple claim: payments in the Substack iPhone app go through Apple's in-app purchase; Android cannot buy in-app; publishers receive the email address but not the payment method (https://on.substack.com/p/in-app-payments-iap-faq, dated August 18, 2025)",
+  "Substack collects first and last name and email address and gives name and email to the publication (https://substack.com/privacy, 'we provide them the information necessary (including your name and email address)')",
+  "Substack payment details include billing address and card details, and Stripe processes card transactions (https://substack.com/privacy)",
+  "Substack's policy: may collect information about your online activity after you leave its site; Creator cookies may include third-party cookies; 'Our services do not support Do Not Track requests at this time'; account deletion from the account page (https://substack.com/privacy)",
+  "Subscriber activity rating is based on email opens and web views, and the subscriber page lists emails received, opened and link clicks (Substack support articles on the Subscribers dashboard, read through search excerpts)",
+  "Survey answers can be tied to a subscriber's email: Substack's survey export includes the subscriber's email address and/or profile (Substack support, 'How do I use surveys on Substack?', search excerpt)",
+  "GitHub: 'When a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not' (docs.github.com, What is GitHub Pages, Data collection)",
+  "Built site (docs/) has no scripts, forms, iframes, images or external stylesheets, only plain links; the home-page footer links Privacy; GitHub Pages responses from three live sites carried no Set-Cookie header",
+  "California 22575 elements against the page: (b)(1) categories and third parties (named, but see the blocking finding), (b)(2) review and change process (write to the contact address, 30 days), (b)(3) change notice (new date on the page, next issue mentions material changes), (b)(4) effective date (November 6, 2026), (b)(5) Do Not Track (present, thin), (b)(6) other parties' tracking (present for Substack and GitHub, thin on publisher-enabled cookies)",
+  "Site and email list against the page: Substack and Stripe collection, calculators collect nothing, GitHub Pages IP logging, how mail is kept, unsubscribe, deletion request are all present"
+ ],
+ "limits": "support.substack.com, leginfo.legislature.ca.gov, law.justia.com and the AG's guidance PDF were not readable by my tools (403 or unreadable); I did not work around the blocks. The statute's text came from FindLaw and California Public Law reproductions and matches the elements as the house rules cite them; Substack support articles came through search excerpts. The Stripe privacy policy, Substack privacy policy, Substack IAP FAQ, GitHub docs and Anthropic pages were read directly.",
+ "one_change_that_helps_most": "Privacy page: list exactly what the publisher can see about a payer (name, email, billing country or address, card brand and last four digits, payment history) so a reader knows before paying. Welcome email: put the renewal term and price in the sentence about renewing.",
+ "checked_at": "2026-11-06"
+}

@@ -1,0 +1,62 @@
+{
+ "_note": "The four fictional readers, fixed for the whole year. Role, pay and equity type come from the plan; filing status, state and the rest were proposed when the skill was built and approved by the publisher on 2026-11-05; the publisher chose Marcus's W-4 setting on 2026-11-06, so his withholding gaps come from his stock pay, not from two-earner W-4s. Calculator inputs use these field names, so a link like #who=marcus&rsu_annual_usd=900000 works on every calculator that has those inputs. Money fields end in _usd, percentages in _pct (22 means 22%).",
+ "characters": [
+  {
+   "id": "priya", "name": "Priya",
+   "headline": "a new-graduate engineer at a public company, earning $180,000",
+   "age": 24, "role": "software engineer, first job after college", "employer": "public tech company",
+   "city": "Seattle", "state": "WA", "filing_status": "single", "household": "single, renting, no children",
+   "salary_usd": 140000, "rsu_annual_usd": 40000, "total_comp_usd": 180000,
+   "rsu_vesting": "quarterly, in February, May, August and November",
+   "espp": {"contribution_pct": 10, "discount_pct": 15, "lookback": true, "purchases": "May and November"},
+   "k401": "6 percent of salary, pre-tax", "k401_pct": 6,
+   "default_goal": "pay less tax"
+  },
+  {
+   "id": "marcus", "name": "Marcus",
+   "headline": "a $350,000 senior product manager in California",
+   "age": 38, "role": "senior product manager", "employer": "public tech company",
+   "city": "San Jose", "state": "CA", "filing_status": "married filing jointly",
+   "household": "married to Elena, a high-school teacher; no children",
+   "salary_usd": 220000, "rsu_annual_usd": 130000, "total_comp_usd": 350000,
+   "spouse_salary_usd": 95000, "household_wages_usd": 445000,
+   "rsu_vesting": "quarterly, in February, May, August and November",
+   "espp": {"contribution_pct": 10, "discount_pct": 15, "lookback": true, "purchases": "May and November"},
+   "w4": "married filing jointly; Step 2 (multiple jobs or spouse works) checked on both his and Elena's W-4s; no extra withholding",
+   "k401": "the maximum, pre-tax",
+   "default_goal": "pay less tax"
+  },
+  {
+   "id": "dana", "name": "Dana",
+   "headline": "a $600,000 staff engineer at a late-stage startup, paid partly in incentive stock options",
+   "age": 33, "role": "staff engineer", "employer": "late-stage private startup",
+   "city": "San Francisco", "state": "CA", "filing_status": "single", "household": "single, no children",
+   "salary_usd": 300000, "paper_equity_annual_usd": 300000, "total_comp_usd": 600000,
+   "iso": {"granted": "2024-03-01", "count": 80000, "strike_usd": 3.5, "fmv_409a_usd": 12, "last_preferred_usd": 18.5,
+           "vesting": "four years, monthly after a one-year cliff", "exercised": 0},
+   "k401": "the maximum, pre-tax",
+   "default_goal": "take less risk"
+  },
+  {
+   "id": "leo", "name": "Leo",
+   "headline": "a $280,000 enterprise sales lead paid in commissions and RSUs",
+   "age": 41, "role": "enterprise account executive", "employer": "public software company",
+   "city": "Austin", "state": "TX", "filing_status": "head of household", "household": "single father of Sofia, 9",
+   "salary_usd": 140000, "commission_target_usd": 100000, "rsu_annual_usd": 40000, "total_comp_usd": 280000,
+   "commission_by_quarter_usd": [15000, 20000, 25000, 40000],
+   "rsu_vesting": "quarterly, in March, June, September and December",
+   "k401": "6 percent of salary, pre-tax", "k401_pct": 6,
+   "default_goal": "pay less tax"
+  }
+ ],
+ "edge_cases": [
+  {"id": "millionaire", "hash": "who=marcus&rsu_annual_usd=1100000",
+   "why": "Supplemental wages over $1 million in a year are withheld at a different rate; totals cross most phase-outs."},
+  {"id": "moved-in-june", "hash": "who=priya&state=CA&moved_to=WA&move_date=2026-06-15",
+   "why": "Part-year residents split income between states. A calculator that can't model it must say so plainly, not give a wrong number."},
+  {"id": "never-vested", "hash": "who=leo&rsu_annual_usd=0",
+   "why": "Left before the cliff: zero stock income must give zeros and sensible words, not NaN or a divide-by-zero."},
+  {"id": "zero-income", "hash": "who=priya&salary_usd=0&rsu_annual_usd=0",
+   "why": "Everything zero: the page should still read sensibly."}
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "lens": "rules",
+ "verdict": "fail",
+ "findings": [
+  {
+   "severity": "blocking",
+   "where": "site/privacy.md, section The newsletter, sentence 2",
+   "what": "Says 'For each email, Substack shows us how many readers opened it and clicked its links'. Substack's own subscriber-dashboard guide says the publisher can click any subscriber and see 'recent activity (emails received, emails opened, link clicks)', and filter by sign-up source and email domain. A reader following the page believes the publisher sees only totals, when Substack gives the publisher per-person email activity. The page must identify the categories of personal information collected (Bus. & Prof. Code 22575(b)(1)); per-person open and click history is one, and this sentence understates it. (The 'activity rating' wording is also unconfirmed: I found no Substack page that says how it is figured, and the unofficial descriptions disagree.)",
+   "evidence": "https://on.substack.com/p/subscriber-dashboard-guide ('recent activity (emails received, emails opened, link clicks)'); https://california.public.law/codes/business_and_professions_code_section_22575 ((b)(1))",
+   "fix": "Replace with: 'For each subscriber, Substack shows us which emails they opened, which links they clicked and where they signed up, and gives each subscriber an activity rating.' Add how it is used only if true (for example 'We use it to see which topics get read, not to contact readers one by one'). Drop the claim about what the rating is based on, or cite where Substack says it."
+  },
+  {
+   "severity": "blocking",
+   "where": "site/privacy.md, section This site, last sentence",
+   "what": "Says the site 'lets no other party collect information about what you do here or on other sites'. The sentence before it says GitHub logs every visitor's IP address, and GitHub's own page says the visitor's IP address 'is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not'. So another party does collect information about visits, and the page contradicts itself in the disclosure 22575(b)(6) asks for (whether other parties may collect personal information about a consumer's online activities).",
+   "evidence": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages (Data collection); https://california.public.law/codes/business_and_professions_code_section_22575 ((b)(6))",
+   "fix": "Say: 'Apart from GitHub's security log of IP addresses, no other party collects information about what you do on this site, and nothing here follows you to other sites.' Keep 'sets no cookies, runs no tracking'. Confirm Settings > Integrations in Substack has no Meta pixel or Google Analytics switched on; if one is, the Substack paragraph must say so (Substack's policy says creator-set cookies may come from Twitter, Facebook, Google and others)."
+  },
+  {
+   "severity": "blocking",
+   "where": "welcome/paid.md, What you get, sentence 1 (and welcome/start-here.md, The paid edition)",
+   "what": "States 'The paid edition opens on March 30, 2027' as fact, and Start here adds that founding memberships go on sale January 5. The plan says that if fewer than thirty founding memberships sell by March 23 the publisher rethinks the paid edition. A reader who pays $90 on January 5 on the strength of these pages is not told the opening depends on that, or what happens to their money if it does not go ahead. Omitting a condition the seller knows about is a misleading claim to a buyer, and the paid welcome is the first thing they read after paying.",
+   "evidence": "references/plan.md, 'The calendar' (Q1 2027 bullet); welcome/paid.md line 9; welcome/start-here.md last section",
+   "fix": "Say 'planned to open March 30, 2027', and add one sentence on the condition and on what founding members get if it does not open (a refund, if that is the publisher's decision: this is the publisher's call, so leave it as a placeholder until decided). The same sentence belongs on the page that sells founding memberships on January 5."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, section Who gets your information, and The newsletter, paragraph 2",
+   "what": "Two gaps. (1) 'Only the services that run the newsletter: Substack, Stripe and the AI service' leaves out GitHub, which the page says logs IP addresses, and the publisher's mailbox provider, where reader mail is kept. (2) 'If you buy a paid subscription, Stripe processes the payment and holds your card details' is not true for readers who subscribe in Substack's iPhone app: Apple takes that payment, publishers cannot turn that off, and the publisher gets only the email address. welcome/paid.md already mentions the Apple route, so the pages disagree. A reader following the privacy page would look to the wrong company for their payment details.",
+   "evidence": "https://on.substack.com/p/in-app-payments-iap-faq ('Apple handles IAP billing, so details like payment method aren't shared'; 'IAP will be enabled for all paid publications in the iOS app'); https://stripe.com/privacy section 1.2",
+   "fix": "Add GitHub (site logs) and the mailbox provider to the list, or say 'the services that run the newsletter and this site'. Add: 'If you subscribe in Substack's iPhone app, Apple handles the payment and we receive only your email address.'"
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, What you get, third paragraph ('The paid calculators add plans across several years')",
+   "what": "House rule 2 says paid optimizers and schedules are 'illustrations, not plans'. 'Plans across several years' can read as a plan for the reader. The plan doc's own phrase is 'multi-year plans', so the wording came from there.",
+   "evidence": "references/house-rules.md rule 2, bullet 4",
+   "fix": "Say 'what-if scenarios across several years' and, where the paid calculator appears, state what it minimizes and its assumptions."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, What you get, bullet 1 ('as code on GitHub')",
+   "what": "Listed under what each paid issue 'adds', but free.md, start-here.md and about.md all say the code is public on GitHub. A buyer could think the code is a paid extra. If the paid model's code is in the public repo, the paid part is the walkthrough and the spreadsheet.",
+   "evidence": "welcome/paid.md line 13 against welcome/free.md line 28; references/plan.md ('GitHub: the code behind every calculation, open to anyone')",
+   "fix": "Say 'the code is public on GitHub for everyone; members get the walkthrough, the spreadsheet and the scenarios', or, if paid code is kept private, say that."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/paid.md, What doesn't change, renewal paragraph",
+   "what": "Good that it says the membership renews each year and where to cancel (Substack's help center: web subscriptions are cancelled in Settings; iPhone-app subscriptions through the App Store; I could only see search excerpts of the support page, which returned 403). It does not say what cancelling does (access to the end of the paid year, refunds) or give the price. House rules, Site and email, still require checking the checkout page and the receipt before January 5; this email does not replace that check.",
+   "evidence": "references/house-rules.md 'Site and email' (renewal bullet); Substack help center 'How do I cancel my paid subscription on Substack?' (search excerpt)",
+   "fix": "Do a test purchase before January 5 and see what the checkout and receipt show about price, renewal date and cancellation. Then add one line only if true, for example 'Cancelling stops the next renewal; you keep access until the end of the year you paid for.' Decide the refund policy and say it."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/free.md, Three places to start, item 2 (the survey)",
+   "what": "'Two quick questions... the survey never asks about income or holdings' is true only if the publisher builds a custom survey. Substack's default reader survey, which the default welcome email links, asks about age, gender and where readers spend time online, so it is not 'two questions'. Responses are not anonymous (exports carry each responder's email and name), as privacy.md says. A free-text 'what you'd most like to read about' box also invites readers to type their own situation, which rule 1 says the newsletter must not invite.",
+   "evidence": "https://pubstacksuccess.substack.com/p/surveys-on-substack-what-you-need ('Default welcome emails have the default reader survey included'); https://pubstacksuccess.substack.com/p/substack-reader-surveys-part-2-viewing (as summarized in search); house-rules.md rule 1",
+   "fix": "In the HTML comment, tell the publisher to replace the default questions with exactly the two promised and to use pick-lists, not free text, before pasting the email."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/free.md, How it's made; welcome/start-here.md, How it's made; welcome/about.md, How it's made ('every calculator is tested against the IRS's own worked examples')",
+   "what": "'Every calculator' is wider than the house wording ('its calculator is tested against the IRS's own worked examples'). Some planned tools do arithmetic the IRS has no worked example for or no arithmetic at all: L5 deadline checklist, L6 sample calendars, L7 form calendar. The engine's IRS test folder is still empty today, so this must be true on the day the pages are pasted.",
+   "evidence": "schedule.json tools for L5 to L7; references/issue-format.md line 40; engine/test/irs (empty on 2026-11-06)",
+   "fix": "Say 'wherever the IRS publishes a worked example, the calculator is tested against it', or limit it to tax calculators. Paste the pages only after L1's gate has passed."
+  },
+  {
+   "severity": "minor",
+   "where": "welcome/start-here.md, The calculators ('a withholding gap calculator')",
+   "what": "'Withholding gap' is never defined, and the page's readers include recruiters and designers.",
+   "evidence": "references/stage-check.md rules lens, item 4",
+   "fix": "Add a clause: 'a withholding gap calculator, which compares the tax taken from pay with the tax stock pay adds'."
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, table row ISOs, 2026 numbers, Long-term capital gain bullet, Section 83(b)",
+   "what": "Plain-English gaps. 'Alternative minimum tax (AMT)' is spelled out but never explained, and 'income figured for the AMT' is the technical term with no gloss; 'restricted stock' is used without saying it differs from RSUs; 'Section 423' and 'Form 8949 (code B)' have no gloss; the bullet 'Long-term capital gain: held more than one year.' is a fragment that states no rate or meaning.",
+   "evidence": "references/stage-check.md rules lens, item 4",
+   "fix": "Gloss AMT once ('a second way of figuring tax that can add to your bill'), say 'restricted stock (shares you own but can lose if you leave before they vest)', give 'Section 423 (the tax-favored kind of ESPP)', and complete the long-term bullet with what it changes, from the sources already listed."
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, Section 83(b), last sentence",
+   "what": "Says the election 'can't be revoked without IRS consent'. House rule 5 says it 'can't be undone'. The regulation allows consent only for a mistake of fact about the transaction, requested within 60 days of learning it, and not for a fall in value. 'Without IRS consent' reads as if asking is a routine way out.",
+   "evidence": "https://www.law.cornell.edu/cfr/text/26/1.83-2 paragraph (f); references/house-rules.md rule 5",
+   "fix": "Say: 'and it can be revoked only with IRS consent, which the rules give only for a mistake of fact about the transaction, not for a drop in the stock's value.'"
+  },
+  {
+   "severity": "minor",
+   "where": "site/cheat-sheet.md, header and footer",
+   "what": "The page most likely to be printed and passed around says it is general information but not that AI agents made it or that no accountant or lawyer has reviewed it. Honest limits are stated on the other pieces and not here.",
+   "evidence": "references/house-rules.md 'Also part of the promise'; plan.md ('One optional human check: an accountant's look at the first quarter's calculators')",
+   "fix": "Add one line under the title: 'Researched, written and checked by AI agents from the sources below; not reviewed by an accountant or lawyer.' (only if still true when it goes live)."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md and welcome/about.md (the whole set: 'we', 'the publisher')",
+   "what": "Across all seven pieces 'we' and 'the publisher' are never identified. A reader asked to trust arithmetic written by agents is not told that a named person reads the replies, approves what goes out and is accountable. This is a question for the publisher, not a rule broken: the disclaimer says AI works 'under the publisher's direction' and the privacy page says 'The publisher reads your message'.",
+   "evidence": "welcome/about.md; site/disclaimer.md 'How it's made'; site/privacy.md 'Email you send us'",
+   "fix": "Add one sentence to About and Privacy saying who publishes it (a name, or at least 'a person reads every reply and signs off on every issue'), if the publisher is willing to be named."
+  },
+  {
+   "severity": "minor",
+   "where": "length: site/cheat-sheet.md (about 720 words, about 560 before Sources), site/privacy.md (about 520), welcome/start-here.md (about 414)",
+   "what": "Over the 400-word target. Required content outranks the target, so this is minor. The cheat sheet is a reference page; its Sources list alone is about 160 words.",
+   "evidence": "modes.md, Welcome (each under 400 words)",
+   "fix": "Leave the privacy page as is; trim cheat-sheet prose if it must fit one printed page."
+  }
+ ],
+ "verified": [
+  "Read all seven pieces in full. No sentence tells a reader what to do with their own shares, options, money or job; no pick words (grep for best, recommend, optimal, right move, better off, smart, should, guarantee, risk-free, expert, adviser, planner, fiduciary found only the disclaimer's denials and 'safely skip')",
+  "No company, ticker, fund or broker named as an example or something to use; Substack, Stripe, GitHub, Anthropic and Apple appear only as the newsletter's own infrastructure, which the privacy page is required to name",
+  "No forecasts of prices, markets, rates or tax law; the disclaimer's 'doesn't predict' line is consistent with rule 3",
+  "No credential claimed (adviser, accountant, lawyer appear only in denials); no invented person; the four characters are labeled fictional in free.md, start-here.md, about.md and disclaimer.md; Start here details match characters.json (Priya 24, WA, $180,000; Marcus CA, joint, $350,000; Dana CA, ISOs; Leo TX, head of household, $280,000)",
+  "No paperwork done for a reader; cheat sheet points to Form 15620 and its 30-day deadline and says plan documents set dates, discount and lookback (rule 4)",
+  "No tease: free pieces promise a complete free answer; paid.md describes the paid additions without a cliffhanger; deadline help stated as free",
+  "Reply invitations are about errors only and privacy.md tells readers not to send account numbers, tax IDs or figures (rules 1 and 6); reader names stay out of public without written permission (rule 6)",
+  "site/disclaimer.md covers all four items in 'Site and email': general information through fictional examples; no adviser, accountant or lawyer relationship; calculators without warranty and the reader's decisions their own; how corrections work (matches modes.md correction line and corrections.md)",
+  "site/privacy.md covers Substack and Stripe, calculators collect nothing, GitHub IP logging, reader mail, unsubscribe and deletion; and 22575(b)(2) to (4): review and change process, how material changes are announced, effective date; (b)(5) Do Not Track: the page says the site does not track, and Substack's 'do not support Do Not Track requests at this time' matches https://substack.com/privacy (last updated May 14, 2026)",
+  "GitHub claim confirmed: 'the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not' (docs.github.com, Data collection)",
+  "Substack claims confirmed: cookies including third-party ones and activity tracking after leaving the site (substack.com/privacy); Substack gives the creator the subscriber's name and email; survey answers are tied to an email address; default welcome email includes the default survey; separate free and paid welcome emails; Excel files can be embedded in a post and sit behind the paywall; a post can be published without email and pinned; cancellation path for web and iPhone-app subscriptions (search excerpt of support.substack.com, which returned 403 to me)",
+  "Stripe acts as a processor for payments (stripe.com/privacy 1.2, updated April 28, 2026)",
+  "Built docs/ pages: the site footer on every page links Disclaimer and Privacy and carries the not-advice line; no scripts, forms, fonts or external links other than the cited sources; relative links to /corrections/ resolve",
+  "Tuesday check: November 17, 2026, January 5, 2027 and March 30, 2027 are all Tuesdays",
+  "{{...}} placeholders not treated as findings"
+ ],
+ "checked_at": "2026-11-06"
+}

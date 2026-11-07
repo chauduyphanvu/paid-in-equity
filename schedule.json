@@ -1,0 +1,576 @@
+{
+ "_note": "Copied from the plan doc's 'Every Tuesday' tables and 'up close' sketches on 2026-11-05. The plan doc wins if they disagree; status is kept by pie.py.",
+ "issues": [
+  {
+   "id": "L1",
+   "date": "2026-11-17",
+   "tier": "free",
+   "title": "Under-withheld on your RSUs? Your last paychecks can still fix 2026",
+   "tool": "Withholding gap calculator",
+   "season": "launch",
+   "sketch": "\"I just noticed my vests were under-withheld all year. Is it too late?\" Not quite. Extra tax withheld from the year's last paychecks is [treated as if it had been paid evenly all year](https://mymoneyblog.com/last-minute-tax-payment-increasing-paycheck-withholding-w-4-is-better-than-direct-estimated-tax-payments-1040-es.html), which can spare readers an underpayment penalty that a January estimated payment can't.\n\nThe withholding calculator makes its debut here, showing the shortfall and how much extra to withhold from each remaining paycheck.",
+   "status": "not-started",
+   "publisher_notes": [
+    "Marcus's W-4s have Step 2 checked, so his gap is the stock's. Add one line for two-earner couples: if neither of you checked Step 2 (multiple jobs or spouse works) on your W-4s, your household's gap is likely much bigger than the stock alone; point to the IRS Tax Withholding Estimator. (2026-11-06)"
+   ]
+  },
+  {
+   "id": "L2",
+   "date": "2026-11-24",
+   "tier": "free",
+   "title": "ISOs before December 31: how many to exercise under the new AMT rules",
+   "tool": "AMT crossover calculator",
+   "season": "launch",
+   "sketch": "\"How many options can I exercise this year before the minimum tax kicks in?\" 2026 is the first year of the new rules, which start taking away the AMT exemption at lower incomes and twice as fast. The issue walks Dana through it.\n\nThe AMT calculator, planned for October 2027, gets an early outing. Anything exercised after December 31 counts toward 2027.",
+   "status": "not-started"
+  },
+  {
+   "id": "L3",
+   "date": "2026-12-01",
+   "tier": "free",
+   "title": "Harvest a loss on company stock without tripping over a December vest",
+   "tool": "Lot picker, with shares typed in",
+   "season": "launch",
+   "sketch": "\"Some of my shares are worth less than when they vested. Can I use the loss?\" Yes, but a vest or a share purchase within thirty days either side of the sale postpones the loss, folding it into the new shares. The issue shows how to time a sale around December's vests.\n\nUntil the statement reader arrives in January, the lot picker works on shares typed in by hand.",
+   "status": "not-started"
+  },
+  {
+   "id": "L4",
+   "date": "2026-12-08",
+   "tier": "free",
+   "title": "Giving stock and converting to a Roth before the year ends",
+   "tool": "Giving and conversion calculator",
+   "season": "launch",
+   "sketch": "\"Is there anything clever to do with my stock before December 31?\" Often, two things. Giving appreciated shares instead of cash avoids the capital-gains tax, and a Roth conversion in a lean year, such as one with a sabbatical or a layoff, can be cheap. The new 0.5 percent floor on charitable deductions makes bunching several years of gifts into one more attractive.\n\nThe calculator compares giving cash with giving shares, and sizes a conversion.",
+   "status": "not-started"
+  },
+  {
+   "id": "L5",
+   "date": "2026-12-15",
+   "tier": "free",
+   "title": "The year-end checklist: everything due by December 31",
+   "tool": "Deadline checklist",
+   "season": "launch",
+   "sketch": "One page of deadlines: the last day to exercise options for 2026, harvest a loss, give stock, convert to a Roth, make 401(k) contributions through payroll, and catch up on withholding.\n\nThe checklist filters itself to the reader's situation.",
+   "status": "not-started"
+  },
+  {
+   "id": "L6",
+   "date": "2026-12-22",
+   "tier": "free",
+   "title": "Meet the four, and what 2027 holds for each",
+   "tool": "Sample 2027 calendars of vests and tax dates",
+   "season": "launch",
+   "sketch": "A lighter issue for the week before the holidays: Priya, Marcus, Dana and Leo, properly introduced, each with a calendar of the vests, share purchases and tax dates coming in 2027.\n\nThe sample calendars are a free taste of the personal one that comes with the paid edition.",
+   "status": "not-started"
+  },
+  {
+   "id": "L7",
+   "date": "2026-12-29",
+   "tier": "free",
+   "title": "Your tax-season calendar: which forms arrive when",
+   "tool": "Tax-form calendar",
+   "season": "launch",
+   "sketch": "The quiet week after Christmas is for getting organized. The issue lists when each form arrives (the W-2 and the option and purchase-plan forms by early February, consolidated 1099s in mid-February, corrected ones into March) and what to do with each.\n\nIt ends by introducing the thirteen-part tax-season series that starts the next Tuesday.",
+   "status": "not-started"
+  },
+  {
+   "id": "1",
+   "date": "2027-01-05",
+   "tier": "free",
+   "title": "Owe tax on your RSUs? Fix it before January 15",
+   "tool": "Withholding gap calculator",
+   "season": "Q1",
+   "sketch": "\"Tax came out of every vest,\" the reader writes. \"So why do I owe thousands?\" The issue starts with how employers sell some of each vest to cover the tax, then explains the catch. They usually withhold a flat 22 percent for federal tax (37 percent above $1 million), while many senior tech workers are in the 32 or 35 percent bracket, before state tax and an extra 0.9 percent Medicare tax.\n\nThe calculator takes salary, stock income, filing status and state, and returns the likely shortfall, a payment that avoids penalties, and the change to the W-4 that fixes 2027. The year's last estimated payment is due January 15.",
+   "status": "not-started"
+  },
+  {
+   "id": "2",
+   "date": "2027-01-12",
+   "tier": "free",
+   "title": "What changed for 2027: the new rules for stock pay",
+   "tool": "Before-and-after for each reader",
+   "season": "Q1",
+   "sketch": "\"Which of the new tax rules affect me?\" The 2025 tax law changed several things that matter here: how much state and local tax can be deducted, how quickly the alternative minimum tax bites, how much startup-stock gain can escape tax, and how charitable gifts count. The issue walks the four characters through each change, plus the year's new contribution limits once the IRS announces them.\n\nThe calculator shows each character's before and after, drawn from the table of new rules under \"The machinery.\" This issue now opens every year. Planning for stock options and the minimum tax, which used to sit here, moves to October (issues 40 and 41), while readers can still act on it.",
+   "status": "not-started"
+  },
+  {
+   "id": "3",
+   "date": "2027-01-19",
+   "tier": "free",
+   "title": "Sell or hold your vested RSUs?",
+   "tool": "Concentration risk simulator",
+   "season": "Q1",
+   "sketch": "\"Should I keep my company's stock?\" The issue turns the question around: if this stock had arrived as cash, would you buy it? Then it replays history for a single stock against the whole market over five and ten years, showing the odds of a deep fall and the full spread of outcomes. Selling at vesting costs little extra tax, since the shares were just taxed at that price.\n\nThe calculator asks what share of your wealth sits in one company and shows where that could leave you.",
+   "status": "not-started"
+  },
+  {
+   "id": "4",
+   "date": "2027-01-26",
+   "tier": "free",
+   "title": "Roth or traditional 401(k) on a $300K salary",
+   "tool": "Roth vs. traditional breakeven model",
+   "season": "Q1",
+   "sketch": "\"Which 401(k) is better when you earn a lot?\" The issue finds the tax rate in retirement at which the two come out even, then tests what happens if you move to a state with no income tax, retire early, or face the withdrawals the law requires in your seventies.\n\nThe calculator finds your own break-even point. January is the right moment, because a switch made early in the year covers the most paychecks; the April 15 deadline for IRAs gets its own free issue in April.",
+   "status": "not-started"
+  },
+  {
+   "id": "5",
+   "date": "2027-02-02",
+   "tier": "free",
+   "title": "Is the mega backdoor Roth worth it?",
+   "tool": "Mega backdoor value projector",
+   "season": "Q1",
+   "sketch": "\"My plan lets me save extra after tax. Should I?\" The issue compares that money converted to a Roth with the same money in an ordinary brokerage account, over ten, twenty and thirty years. It includes a checklist for whether your plan really allows it: after-tax contributions, plus a way to convert or withdraw them while you're still employed.\n\nThe calculator projects the difference, with the checklist built in.",
+   "status": "not-started"
+  },
+  {
+   "id": "6",
+   "date": "2027-02-09",
+   "tier": "free",
+   "title": "ESPP: the math on the discount",
+   "tool": "ESPP return calculator",
+   "season": "Q1",
+   "sketch": "\"Should I put the most I can into the purchase plan, and when should I sell?\" The issue works out the return from the discount and from the lookback, which lets you buy at the lower of two prices, within the plan's $25,000-a-year limit. It compares selling at once with holding long enough for gentler tax treatment, and weighs the risk that the price falls in the meantime.\n\nThe calculator reads its numbers straight off Form 3922, which employers must send by January 31 (in 2027, by February 1, since the 31st falls on a Sunday).",
+   "status": "not-started"
+  },
+  {
+   "id": "7",
+   "date": "2027-02-16",
+   "tier": "free",
+   "title": "Filing with RSUs: your W-2, 1099-B and the double-tax trap",
+   "tool": "Cost basis fixer",
+   "season": "Q1",
+   "sketch": "\"Why does my 1099-B show a huge gain on shares I've already paid tax on?\" Brokers often report what you paid for vested shares as zero, or leave it blank, so filing the form as it stands taxes the same income twice. That income is already on the W-2, in box 1; the fix is the broker's supplemental statement and a correction on Form 8949. The issue shows what the mistake would cost each character.\n\nThe calculator opens your broker's file in your browser and produces corrected lines. The forms arrive in mid-February and corrected versions often follow into March, so the advice is to wait for the final one.",
+   "status": "not-started"
+  },
+  {
+   "id": "8",
+   "date": "2027-02-23",
+   "tier": "free",
+   "title": "The wash sale trap in RSU vests and ESPP buys",
+   "tool": "Wash sale checker",
+   "season": "Q1",
+   "sketch": "\"Why was my loss on company stock disallowed?\" If shares vest, or the purchase plan buys, within thirty days before or after you sell at a loss, the loss can be disallowed. The issue shows how often a quarterly vesting schedule collides with a sale at a loss, including the cases brokers miss, since each one checks only its own accounts.\n\nThe calculator scans your trading history without it leaving your computer. Readers are filing now, and the next vesting date sets this year's risk.",
+   "status": "not-started"
+  },
+  {
+   "id": "9",
+   "date": "2027-03-02",
+   "tier": "free",
+   "title": "Two offers: what total comp really means",
+   "tool": "Offer comparison calculator",
+   "season": "Q1",
+   "sketch": "\"Which offer is worth more?\" The issue folds in how the stock vests, front-loaded or evenly, the one-year cliff, likely future grants, how much the stock swings, and state tax, and arrives at one after-tax figure with a range around it.\n\nThe calculator compares the offers side by side, with an optional simulation of the stock price.",
+   "status": "not-started"
+  },
+  {
+   "id": "10",
+   "date": "2027-03-09",
+   "tier": "free",
+   "title": "What your startup options are actually worth",
+   "tool": "Exit scenario simulator",
+   "season": "Q1",
+   "sketch": "\"What is my startup stock worth in actual money?\" The issue follows the price you'd pay for each share, the price investors paid, the dilution from future funding rounds, and investors' right to be paid first, across a range of fates for the company. Then it sets the result against the salary you gave up to take the job.\n\nThe calculator takes the company's numbers and shows your payout under each outcome.",
+   "status": "not-started"
+  },
+  {
+   "id": "11",
+   "date": "2027-03-16",
+   "tier": "free",
+   "title": "The layoff money plan",
+   "tool": "Runway calculator",
+   "season": "Q1",
+   "sketch": "\"If I'm laid off tomorrow, how long can I last, and what should I do first?\" The issue counts the months that savings, severance and unemployment benefits will cover. It compares keeping your employer's health plan through COBRA with buying coverage on the public marketplace (checking first whether the larger subsidies still exist), and explains what happens to unvested stock and any outstanding 401(k) loan.\n\nThe calculator shows how many months you'd have at three levels of spending.",
+   "status": "not-started"
+  },
+  {
+   "id": "12",
+   "date": "2027-03-23",
+   "tier": "free",
+   "title": "Your freedom number, when much of what you own is company stock",
+   "tool": "Freedom-number simulator",
+   "season": "Q1",
+   "sketch": "\"When could I stop needing a paycheck?\" The quarter's threads come together here: savings rate, stock, the kinds of accounts you hold, and how much you could safely withdraw if the market falls just as you stop working. The issue builds on public research, including [Early Retirement Now's series on withdrawal rates](https://earlyretirementnow.com/safe-withdrawal-rate-series/) and [Morningstar's annual study](https://www.morningstar.com/retirement/whats-safe-retirement-withdrawal-rate-2026).\n\nThe calculator replays more than a century of market history to estimate when you'd get there.",
+   "status": "not-started"
+  },
+  {
+   "id": "13",
+   "date": "2027-03-30",
+   "tier": "free",
+   "title": "The five moves worth the most, and the paid edition opens",
+   "tool": "Every Q1 model, for paying members",
+   "season": "Q1",
+   "sketch": "\"Of everything this quarter, what should I do first?\" The issue ranks the quarter's advice by how many dollars it's worth to each of the four characters.\n\nThere's no new calculator. Instead the paid edition opens, and its first offering is every model from the quarter. Tax season is ending, and readers have had twelve weeks to decide whether the math holds up.",
+   "status": "not-started"
+  },
+  {
+   "id": "14",
+   "date": "2027-04-06",
+   "tier": "free",
+   "title": "Backdoor Roth IRA before April 15: the pro-rata trap",
+   "tool": "Pro-rata checker",
+   "season": "Q2",
+   "status": "not-started"
+  },
+  {
+   "id": "15",
+   "date": "2027-04-13",
+   "tier": "paid",
+   "title": "The backdoor Roth, every year, without fuss",
+   "tool": "Rollover cleanup model",
+   "season": "Q2",
+   "pair_of": "14",
+   "status": "not-started"
+  },
+  {
+   "id": "16",
+   "date": "2027-04-20",
+   "tier": "free",
+   "title": "Get back the AMT you paid: the AMT credit",
+   "tool": "AMT credit tracker",
+   "season": "Q2",
+   "status": "not-started"
+  },
+  {
+   "id": "17",
+   "date": "2027-04-27",
+   "tier": "paid",
+   "title": "Recovering the AMT credit across years",
+   "tool": "AMT credit recovery model",
+   "season": "Q2",
+   "pair_of": "16",
+   "status": "not-started"
+  },
+  {
+   "id": "18",
+   "date": "2027-05-04",
+   "tier": "free",
+   "title": "State taxes on equity pay: California, New York and Washington",
+   "tool": "State tax comparator",
+   "season": "Q2",
+   "status": "not-started"
+  },
+  {
+   "id": "19",
+   "date": "2027-05-11",
+   "tier": "paid",
+   "title": "The state-by-state equity tax model",
+   "tool": "State-by-state model",
+   "season": "Q2",
+   "pair_of": "18",
+   "status": "not-started"
+  },
+  {
+   "id": "20",
+   "date": "2027-05-18",
+   "tier": "free",
+   "title": "Moving states with unvested RSUs",
+   "tool": "State sourcing calculator",
+   "season": "Q2",
+   "status": "not-started"
+  },
+  {
+   "id": "21",
+   "date": "2027-05-25",
+   "tier": "paid",
+   "title": "Timing a move around your vests",
+   "tool": "Multi-state allocation model",
+   "season": "Q2",
+   "pair_of": "20",
+   "status": "not-started"
+  },
+  {
+   "id": "22",
+   "date": "2027-06-01",
+   "tier": "free",
+   "title": "Double-trigger RSUs: the IPO-day tax bill",
+   "tool": "IPO-day tax estimator",
+   "season": "Q2",
+   "status": "not-started"
+  },
+  {
+   "id": "23",
+   "date": "2027-06-08",
+   "tier": "paid",
+   "title": "IPO-day planning: cash for the tax bill and what to sell",
+   "tool": "IPO-day cash model",
+   "season": "Q2",
+   "pair_of": "22",
+   "status": "not-started"
+  },
+  {
+   "id": "24",
+   "date": "2027-06-15",
+   "tier": "free",
+   "title": "Mid-year check: big vests, commissions and the Q2 estimate due today",
+   "tool": "Withholding gap calculator, mid-year mode",
+   "season": "Q2",
+   "status": "not-started"
+  },
+  {
+   "id": "25",
+   "date": "2027-06-22",
+   "tier": "paid",
+   "title": "Lumpy income: the annualized estimate method",
+   "tool": "Annualized estimate model",
+   "season": "Q2",
+   "pair_of": "24",
+   "status": "not-started"
+  },
+  {
+   "id": "26",
+   "date": "2027-06-29",
+   "tier": "free",
+   "title": "Halfway: every model rechecked, and the survey opens",
+   "tool": "The survey, and what changed",
+   "season": "Q2",
+   "status": "not-started"
+  },
+  {
+   "id": "27",
+   "date": "2027-07-06",
+   "tier": "free",
+   "title": "Stock is down: harvesting losses on RSUs and ESPP without wash sales",
+   "tool": "Lot picker",
+   "season": "Q3",
+   "status": "not-started"
+  },
+  {
+   "id": "28",
+   "date": "2027-07-13",
+   "tier": "paid",
+   "title": "Which shares to sell, across many vests",
+   "tool": "Lot optimization model",
+   "season": "Q3",
+   "pair_of": "27",
+   "status": "not-started"
+  },
+  {
+   "id": "29",
+   "date": "2027-07-20",
+   "tier": "free",
+   "title": "Visa holders: RSUs, 401(k)s and leaving the US",
+   "tool": "Account exit checker",
+   "season": "Q3",
+   "status": "not-started"
+  },
+  {
+   "id": "30",
+   "date": "2027-07-27",
+   "tier": "paid",
+   "title": "The exit plan: each account if you move abroad",
+   "tool": "Cross-border exit model",
+   "season": "Q3",
+   "pair_of": "29",
+   "status": "not-started"
+  },
+  {
+   "id": "31",
+   "date": "2027-08-03",
+   "tier": "free",
+   "title": "Early exercise and the 83(b) election",
+   "tool": "83(b) decision calculator",
+   "season": "Q3",
+   "status": "not-started"
+  },
+  {
+   "id": "32",
+   "date": "2027-08-10",
+   "tier": "paid",
+   "title": "Exercising early, and the new rules on tax-free startup gains",
+   "tool": "Early exercise model",
+   "season": "Q3",
+   "pair_of": "31",
+   "status": "not-started"
+  },
+  {
+   "id": "33",
+   "date": "2027-08-17",
+   "tier": "free",
+   "title": "Non-qualified stock options: when to exercise",
+   "tool": "NSO exercise calculator",
+   "season": "Q3",
+   "status": "not-started"
+  },
+  {
+   "id": "34",
+   "date": "2027-08-24",
+   "tier": "paid",
+   "title": "NSO exercise timing across years",
+   "tool": "NSO timing model",
+   "season": "Q3",
+   "pair_of": "33",
+   "status": "not-started"
+  },
+  {
+   "id": "35",
+   "date": "2027-08-31",
+   "tier": "free",
+   "title": "Readers' questions, and last call for the survey",
+   "tool": "Reader questions, computed",
+   "season": "Q3",
+   "status": "not-started"
+  },
+  {
+   "id": "36",
+   "date": "2027-09-07",
+   "tier": "free",
+   "title": "IPO coming? Lockups, blackout windows and 10b5-1 plans",
+   "tool": "Lockup calendar",
+   "season": "Q3",
+   "status": "not-started"
+  },
+  {
+   "id": "37",
+   "date": "2027-09-14",
+   "tier": "paid",
+   "title": "When the lockup ends: a schedule for selling",
+   "tool": "Selling schedule model",
+   "season": "Q3",
+   "pair_of": "36",
+   "status": "not-started"
+  },
+  {
+   "id": "38",
+   "date": "2027-09-21",
+   "tier": "free",
+   "title": "Too much company stock: exchange funds, gifting and staged selling",
+   "tool": "Concentration exit planner",
+   "season": "Q3",
+   "status": "not-started"
+  },
+  {
+   "id": "39",
+   "date": "2027-09-28",
+   "tier": "paid",
+   "title": "A diversification schedule that keeps the tax bill down",
+   "tool": "Diversification schedule model",
+   "season": "Q3",
+   "pair_of": "38",
+   "status": "not-started"
+  },
+  {
+   "id": "40",
+   "date": "2027-10-05",
+   "tier": "free",
+   "title": "ISO exercise planning before year-end, under the 2026 AMT rules",
+   "tool": "AMT crossover calculator",
+   "season": "Q4",
+   "status": "not-started"
+  },
+  {
+   "id": "41",
+   "date": "2027-10-12",
+   "tier": "paid",
+   "title": "A multi-year ISO exercise plan",
+   "tool": "ISO exercise optimizer",
+   "season": "Q4",
+   "pair_of": "40",
+   "status": "not-started"
+  },
+  {
+   "id": "42",
+   "date": "2027-10-19",
+   "tier": "free",
+   "title": "Open enrollment for equity pay: ESPP elections, after-tax 401(k), HSA",
+   "tool": "Benefits election checker",
+   "season": "Q4",
+   "status": "not-started"
+  },
+  {
+   "id": "43",
+   "date": "2027-10-26",
+   "tier": "paid",
+   "title": "Next year's benefits elections, modeled",
+   "tool": "Benefits value model",
+   "season": "Q4",
+   "pair_of": "42",
+   "status": "not-started"
+  },
+  {
+   "id": "44",
+   "date": "2027-11-02",
+   "tier": "free",
+   "title": "Private company tender offers: sell or wait?",
+   "tool": "Tender offer calculator",
+   "season": "Q4",
+   "status": "not-started"
+  },
+  {
+   "id": "45",
+   "date": "2027-11-09",
+   "tier": "paid",
+   "title": "How much to sell in a tender, and what you'll owe",
+   "tool": "Tender decision model",
+   "season": "Q4",
+   "pair_of": "44",
+   "status": "not-started"
+  },
+  {
+   "id": "46",
+   "date": "2027-11-16",
+   "tier": "free",
+   "title": "State of Equity Comp 2027: the findings",
+   "tool": "Interactive report",
+   "season": "Q4",
+   "status": "not-started"
+  },
+  {
+   "id": "47",
+   "date": "2027-11-23",
+   "tier": "paid",
+   "title": "Benchmark yourself against the survey",
+   "tool": "Grant benchmark, run in your browser",
+   "season": "Q4",
+   "pair_of": "46",
+   "status": "not-started"
+  },
+  {
+   "id": "48",
+   "date": "2027-11-30",
+   "tier": "free",
+   "title": "The year-end checklist: everything due by December 31",
+   "tool": "Deadline checklist",
+   "season": "Q4",
+   "status": "not-started"
+  },
+  {
+   "id": "49",
+   "date": "2027-12-07",
+   "tier": "free",
+   "title": "Year-end moves under the new charitable rules: harvesting, Roth conversions, giving stock",
+   "tool": "Roth conversion calculator",
+   "season": "Q4",
+   "status": "not-started"
+  },
+  {
+   "id": "50",
+   "date": "2027-12-14",
+   "tier": "paid",
+   "title": "Year-end, in detail: how much to convert, and when to bunch gifts",
+   "tool": "Giving and conversion optimizer",
+   "season": "Q4",
+   "pair_of": "49",
+   "status": "not-started"
+  },
+  {
+   "id": "51",
+   "date": "2027-12-21",
+   "tier": "free",
+   "title": "What changes in 2028",
+   "tool": "2028 preview",
+   "season": "Q4",
+   "status": "not-started"
+  },
+  {
+   "id": "52",
+   "date": "2027-12-28",
+   "tier": "free",
+   "title": "The year's best reader questions",
+   "tool": "Reader questions, computed",
+   "season": "Q4",
+   "status": "not-started"
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+  "lens": "numbers",
+  "verdict": "fail",
+  "findings": [
+    {
+      "severity": "blocking",
+      "where": "site/privacy.md, section \"The newsletter\", sentence 2",
+      "what": "Says \"For each email, Substack shows us how many readers opened it and clicked its links\". That reads as aggregate counts only. Substack's own help pages say the publisher also sees each subscriber's own open counts (\"Email opens (last 7 days, 30 days, 6 months)\", \"Emails opened (last 6 months)\") and, on opening a subscriber's record, \"recent activity (emails received, emails opened, link clicks)\". A reader who relies on this page would believe individual opens and clicks are not visible to the publisher, and they are. The next clause (an activity rating per subscriber) hints at it but does not say it.",
+      "evidence": "https://support.substack.com/hc/en-us/articles/360058529871-How-do-I-use-the-subscriber-dashboard-on-Substack (columns list, fetched via the help-center API 2026-11-06); https://on.substack.com/p/subscriber-dashboard-guide (\"Clicking an individual subscriber's email shows recent activity (emails received, emails opened, link clicks)\"); https://support.substack.com/hc/en-us/articles/6461334789652 (stars = activity from email opens and web views)",
+      "fix": "Say it per person: \"Substack shows us, for each subscriber, how many of our emails they opened and which links they clicked, and gives each an activity rating based on email opens and web views.\""
+    },
+    {
+      "severity": "minor",
+      "where": "site/privacy.md, section \"This site\", last sentence, and \"Your choices\" (Do Not Track bullet)",
+      "what": "\"lets no other party collect information about what you do here\" and \"this site ... track[s] no one\" sit one sentence after the page says GitHub logs every visitor's IP address. The host necessarily sees which pages are requested, so the sentences overreach as written. The IP-logging sentence itself is accurate (GitHub Docs, Data collection: \"the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not\").",
+      "evidence": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages (Data collection)",
+      "fix": "\"The site itself sets no cookies and runs no analytics or tracking scripts, and it loads nothing from other parties.\" Only keep the last clause if the built site really loads nothing third-party (not checked here). In the Do Not Track bullet say \"the site runs no tracking of its own\"."
+    },
+    {
+      "severity": "minor",
+      "where": "site/privacy.md, \"The newsletter\" paragraph 2 and \"Who gets your information\"; compare welcome/paid.md \"Your membership renews...\"",
+      "what": "Says \"If you buy a paid subscription, Stripe processes the payment and holds your card details\" and that only Substack, Stripe and the AI service get your information. paid.md itself says some readers subscribe in Substack's iPhone app, where Apple's in-app payment system takes the payment (Substack: \"readers pay Apple\"). For those readers Apple, not Stripe, handles the card. Substack's privacy policy also lists \"credit card details\" among data Substack collects, with Stripe as its processor, so \"Stripe ... holds\" is more specific than the source.",
+      "evidence": "https://support.substack.com/hc/en-us/articles/19718129670420-Can-my-subscribers-pay-on-the-Substack-iOS-app ; https://substack.com/privacy (\"we use Stripe (a third party payment provider) to receive and process your credit card transactions for us\"; \"payment details (including billing address, credit card details...)\")",
+      "fix": "\"If you buy a paid subscription, Substack's payment processor, Stripe, handles the card (or Apple does, if you subscribe in Substack's iPhone app); we never see your card number.\" Add Apple to \"Who gets your information\" or say \"and the payment processor you choose\"."
+    },
+    {
+      "severity": "minor",
+      "where": "welcome/paid.md, HTML comment at top (and the paste instructions)",
+      "what": "Tells the publisher to paste this into \"Welcome email (paid)\" once founding memberships go on sale January 5, 2027. Substack has a separate \"Welcome email to founding subscribers\" template: \"If you have payments enabled and a reader subscribes as a founding member, they'll receive this email.\" The first buyers (founding members) would therefore get Substack's default text, not this email, unless it is pasted into the founding template too.",
+      "evidence": "https://support.substack.com/hc/en-us/articles/24034796625428-How-do-I-set-up-welcome-emails-on-Substack (four welcome templates: free, paid, imported, founding)",
+      "fix": "Add to the comment: \"Paste it into 'Welcome email to founding subscribers' as well.\""
+    },
+    {
+      "severity": "minor",
+      "where": "welcome/paid.md, \"What doesn't change\", sentence \"Your membership renews automatically each year until you cancel.\"",
+      "what": "True only for an annual plan. Substack subscriptions also come in monthly intervals (Substack dashboard: \"subscription intervals like monthly or annual\"). I could not see from the pieces which plans will be sold; if a monthly plan exists, a monthly subscriber would be told the wrong renewal period.",
+      "evidence": "https://support.substack.com/hc/en-us/articles/360058529871 (Subscription type column: monthly or annual)",
+      "fix": "If only annual plans are sold, keep it. Otherwise: \"Your membership renews automatically at the end of each billing period (a month or a year, whichever you chose) until you cancel.\""
+    },
+    {
+      "severity": "minor",
+      "where": "welcome/free.md (\"each comes with a free calculator\"), welcome/start-here.md (\"each comes with a free calculator\"), welcome/about.md (\"links to a free calculator\")",
+      "what": "Says every answer comes with a free calculator. schedule.json issue 13 (2027-03-30) says outright \"There's no new calculator\" (its tool is \"Every Q1 model, for paying members\"), and issues 26, 46, 51 and 35/52 list a survey page, an interactive report, a preview and reader questions rather than a calculator. A reader would expect a calculator every Tuesday and not get one on those weeks.",
+      "evidence": "schedule.json issues 13, 26, 35, 46, 51, 52 (tool and sketch fields)",
+      "fix": "\"most issues come with a free calculator\" (or \"each comes with a free tool\")."
+    }
+  ],
+  "verified": [
+    "Cheat sheet, supplemental withholding: flat 22% and 37% over $1 million a year, 2026 (Pub 15 (2026) What's New and section 7: \"The withholding rate on supplemental wages remains 22% (37% if supplemental wages ... exceed $1 million)\"; excess \"subject to withholding at 37% ... without regard to the employee's Form W-4\")",
+    "Cheat sheet, top rate 37%, tax year 2026 (Rev. Proc. 2025-32 sec. 2.01 and sec. 4.01 tables: 37% over $640,600 single, over $768,700 joint)",
+    "Cheat sheet, Social Security 6.2% up to $184,500 for 2026 (Pub 15 (2026) section 9: \"The social security wage base limit is $184,500\"; SSA notice 90 FR 49047, published 2025-11-03, \"OASDI contribution and benefit base is $184,500 for remuneration paid in 2026\"; the citation and title match the Federal Register API record)",
+    "Cheat sheet, Medicare 1.45%, no wage cap, employer withholding of 0.9% Additional Medicare Tax on wages over $200,000 (Pub 15 (2026) section 9)",
+    "Cheat sheet, Additional Medicare Tax thresholds $250,000 joint / $125,000 MFS / $200,000 otherwise (IRC 3101(b)(2): joint $250,000, MFS one-half of that, other $200,000)",
+    "Cheat sheet, AMT exemption for 2026: $90,100 unmarried (single and head of household), $140,200 joint, $70,100 MFS (Rev. Proc. 2025-32 sec. 4.10 table)",
+    "Cheat sheet, AMT phase-out starts at $1,000,000 joint and $500,000 for everyone else including MFS, at 50 cents per dollar (Rev. Proc. 2025-32 sec. 4.10: threshold $1,000,000 / $500,000 / $500,000, complete phase-out $1,280,400 / $680,200 / $640,200; my script confirms each gap equals twice the exemption, so exactly 50%; IRC 55(d)(4)(A)(ii) substitutes \"50 percent\" for \"25 percent\" and $1,000,000 for $150,000)",
+    "Cheat sheet, long-term means held more than one year (Pub 550 (2025) Holding Period; IRC 1222)",
+    "Cheat sheet, ESPP and ISO qualifying-sale test: later of 2 years from grant and 1 year from transfer (IRC 422(a)(1), 423(a)(1); Pub 525 (2025) \"Holding period requirement\")",
+    "Cheat sheet, ESPP qualifying wages = lesser of the actual gain and the grant-date discount, option price figured as if exercised at grant (so 15% of grant-date value in a 15% plan); zero ordinary income after a loss (Pub 525 (2025), \"Option granted at a discount\" and Example 10)",
+    "Cheat sheet, ESPP sold sooner: wages = purchase-date value minus price paid, not limited to the gain (Pub 525 (2025), \"Holding period requirement not satisfied\", Example 11)",
+    "Cheat sheet, ISO sold sooner: ordinary income up to the spread at exercise, capped at the gain, no ordinary income on a loss (Pub 525 (2025), ISO \"Holding period requirement not satisfied\")",
+    "Cheat sheet, no Social Security, Medicare or income tax withholding on ISO/ESPP wages (Pub 15-B (2026) \"Employee Stock Options\")",
+    "Cheat sheet, grant/exercise/sale table for RSUs, ESPP, ISOs, NSOs, including NSO spread as W-2 wages and ISO spread as AMT item on Form 6251 line 2i (Pub 525 (2025); Instructions for Form 6251 (2025) line 2i; IRS Information Letter 2024-0010 for RSUs)",
+    "Cheat sheet, basis: broker may not add compensation income to basis for stock granted or acquired on or after Jan 1, 2014; Form 8949 code B for incorrect basis (26 CFR 1.6045-1(d)(6)(ii)(A); Instructions for Form 1099-B (2026); Instructions for Form 8949 (2025) column (f) table)",
+    "Cheat sheet, 83(b): 30 days after transfer, Form 15620 or a signed written statement, not revocable without IRS consent, not available for options or RSUs (IRC 83(b)(2); Form 15620 (Rev. 4-2025) instructions; Pub 525 (2025) \"Choosing to include in income for year of transfer\")",
+    "Cheat sheet dates, weekdays by Python (welcome/checks/work/numbers.py): January 15, 2027 Friday; February 1, 2027 Monday; February 16, 2027 Tuesday; April 15, 2027 Thursday",
+    "Cheat sheet, January 15, 2027 fourth 2026 estimated payment (Form 1040-ES (2026) payment schedule: \"4th payment ... Jan. 15, 2027\")",
+    "Cheat sheet, February 1, 2027 for W-2 to employees (General Instructions for Forms W-2 and W-3 (2026): furnish Copies B, C and 2 \"by February 1, 2027\") and for 3921/3922 (statutory January 31, 2027 is a Sunday so next business day is Monday February 1; IRC 6039(b); General Instructions for Certain Information Returns guide row: 3921 and 3922 to recipient January 31)",
+    "Cheat sheet, February 16, 2027 for Form 1099-B: statutory date February 15 (26 CFR 1.6045-1(k); the IRS general instructions give no later date for consolidated statements), and February 15, 2027 is Washington's Birthday, the third Monday of February (5 U.S.C. 6103), so Tuesday the 16th",
+    "Cheat sheet, April 15, 2027 return due date (IRC 6072(a); a Thursday, not a holiday)",
+    "Cheat sheet sources: all 29 links resolve (the eCFR and Federal Register pages sit behind a bot-check page for scripts but load for people; I read the same text through their APIs)",
+    "welcome/*.md, about.md: Tuesday, November 17, 2026 is the first issue, L1 in schedule.json, Withholding gap calculator, and is a Tuesday",
+    "welcome/paid.md, start-here.md: March 30, 2027 (Tuesday) is issue 13, \"the paid edition opens\"; first paid issue is 15 on 2027-04-13, always a week after a free one; from April 22 free issues exist and 17 are followed by a paid issue the next Tuesday, so \"most topics get two Tuesdays\" holds (the five without a pair are the survey, reader-question and year-end/preview issues); January 5, 2027 is a Tuesday and is issue 1's date (the founding-membership sale date itself is not in schedule.json or characters.json, so I could only check it is not contradicted)",
+    "welcome/start-here.md, free.md: character facts match characters.json: Priya 24, WA, $180,000 (salary 140,000 + RSUs 40,000), RSUs and ESPP; Marcus CA, MFJ, $350,000 (220,000 + 130,000), RSUs and ESPP; Dana CA, late-stage private startup, ISOs, $600,000 (300,000 + 300,000 paper equity); Leo TX, head of household, $280,000 (140,000 + 100,000 + 40,000), commissions and RSUs",
+    "welcome/free.md: \"Through December ... moves that still count for 2026 and the tax forms on their way; in January, tax season starts\" matches L1 to L7 and issue 1 in schedule.json",
+    "site/privacy.md: GitHub logs each visitor's IP address for security whether or not they use GitHub (GitHub Docs, What is GitHub Pages, Data collection); GitHub general privacy statement and Stripe privacy links resolve",
+    "site/privacy.md: Substack collects name and email and gives them to the publisher; uses cookies including ones set by third parties; may collect activity after you leave its site; does not support Do Not Track; activity rating covers email opens and web views (Substack privacy policy, Last Updated May 14, 2026; Substack help \"What are the stars on my Subscribers dashboard?\")",
+    "site/privacy.md: effective date November 6, 2026 (a Friday, today); site/disclaimer.md comment date November 6, 2026",
+    "welcome/paid.md: Substack allows XLSX files as post attachments (\"How can I attach a file to my Substack post?\"); cancelling is in Substack settings, or through the App Store for subscriptions bought in the iPhone app (\"How do I cancel my paid subscription on Substack?\")",
+    "welcome/free.md, about.md, start-here.md setup notes: Substack's default welcome email includes the New reader survey link unless the template was edited; About page is edited under Settings > Website; Welcome emails live under Settings > Emails; a post can be pinned to the homepage"
+  ],
+  "checked_at": "2026-11-06"
+}
