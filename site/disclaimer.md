@@ -2,7 +2,7 @@
 
 # Disclaimer
 
-Paid in Equity explains how stock pay is taxed: restricted stock units (RSUs), employee stock purchase plans, stock options, withholding and the alternative minimum tax. Everything here, in the newsletter and on this site, is general information. It is not tax, investment or legal advice for your situation.
+Paid in Equity explains how stock pay is taxed: restricted stock units (RSUs), employee stock purchase plans, stock options and withholding (the tax taken out of pay). It also covers the alternative minimum tax, a second way of figuring tax that can add to the bill. Everything here, in the newsletter and on this site, is general information. It is not tax, investment or legal advice for your situation.
 
 ## Fictional examples, not your situation
 
@@ -10,11 +10,13 @@ Each issue works through four fictional people, Priya, Marcus, Dana and Leo, wit
 
 ## No professional relationship
 
-Reading the newsletter, using a calculator or writing to us does not make anyone your adviser, accountant or lawyer. We don't review anyone's own holdings, returns or paperwork, and we don't tell readers what to buy, sell, exercise, hold or sign. The newsletter never names a company's stock as one to buy or sell, and it doesn't predict prices, markets or changes to tax law.
+Reading the newsletter, using a calculator or writing to us does not make anyone your adviser, accountant or lawyer. We don't review anyone's own holdings, returns or paperwork, and we don't tell readers what to buy, sell, exercise, hold or sign.
+
+The newsletter never names a company's stock as one to buy or sell, and it doesn't predict prices, markets or changes to tax law. Where an issue shows bad, likely and great outcomes, those are what-if scenarios built from one uncertain input, not forecasts.
 
 ## How it's made
 
-AI agents research, write and check each issue under the publisher's direction. Every figure comes from a primary source such as an IRS publication, a form's instructions, the tax code or a state tax agency, and it carries the date it was checked. The calculators are tested against the IRS's own worked examples, wherever the IRS publishes one, before an issue goes out.
+AI agents research, write and check each issue under the publisher's direction. Every tax rule, rate and limit comes from a primary source, such as an IRS publication, a form's instructions, the tax code or a state tax agency. Each one carries the date it was checked. The calculators are tested against the IRS's own worked examples, wherever the IRS publishes one, before an issue goes out.
 
 ## The calculators
 
@@ -22,6 +24,8 @@ The calculators run in your browser and send nothing anywhere. They are provided
 
 ## When something is wrong
 
-Rules change and mistakes happen. When a reader reports an error and we confirm it, we fix the calculator and the post, add a dated correction line under the post's summary, mention it in the next email, and list it in the [corrections log](../corrections/). We don't quietly replace a post. To report an error, reply to any issue.
+Rules change and mistakes happen. When a reader reports an error and we confirm it, we fix the calculator and the post and add a dated correction line under the post's summary. We also mention it in the next email and list it in the [corrections log](../corrections/). We don't quietly replace a post.
+
+To report an error, reply to any issue or write to [andzrev@pm.me](mailto:andzrev@pm.me).
 
 Nothing on this page limits a right you have under the law where you live.

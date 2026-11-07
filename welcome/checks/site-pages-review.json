@@ -1,0 +1,105 @@
+{
+ "lens": "rules",
+ "verdict": "fail",
+ "findings": [
+  {
+   "severity": "blocking",
+   "where": "site/privacy.md, opening paragraph, second sentence (live at /privacy/)",
+   "what": "The summary says \"the newsletter keeps only what it needs to email you.\" The page's own sections say more is kept: which emails each subscriber opened and which links they clicked, plus an activity rating; optional survey answers tied to the email address; billing address, country and card details for paying members; and every message a reader sends, including a copy processed by an AI service. A reader who stops at the summary, the one line most people read, would believe only an email address is held. A posted policy that understates what is collected is what Bus. & Prof. Code §22576 (failing to follow a posted privacy policy, knowingly or negligently and materially) and the FTC's deception rules are aimed at, and no lawyer is reviewing this page.",
+   "evidence": "Contradicted by site/privacy.md sections \"The newsletter\" and \"Email you send us\"; Substack opens/clicks: https://on.substack.com/p/subscriber-dashboard-guide (\"emails received, emails opened, link clicks\"); https://substack.com/privacy (Last Updated May 14, 2026) lists name, email and payment details including billing address; §22576: https://california.public.law/codes/business_and_professions_code_section_22576",
+   "fix": "Replace the second sentence with an accurate one, for example: \"In short: the calculators collect nothing. The newsletter collects what Substack and Stripe collect when you subscribe or pay, plus any message you send us; the sections below list it.\" Better still, make the summary a three-line list of who holds what: calculators (nothing), Substack (name, email, opens and clicks, optional survey answers), Stripe or Apple (payment), and messages you send."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, \"Who gets your information\", last sentence",
+   "what": "\"your income, holdings and tax details never reach us\" is an absolute that the page itself undercuts: a reader can email figures (the page asks them not to), and the optional survey asks how a reader is paid. True of the calculators, not of everything.",
+   "evidence": "site/privacy.md \"Email you send us\" (\"Please don't send ... your own figures\") and \"The newsletter\" (survey: \"how you're paid\")",
+   "fix": "\"The calculators never send us your income, holdings or tax details.\""
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, \"The newsletter\", second paragraph (Stripe sentence)",
+   "what": "\"Through Stripe, we can see a paying subscriber's name, email, billing address and country, and the card's brand and last four digits\" is a precise list I could not confirm on a Substack or Stripe page. Substack's FAQ says only that publishers \"retain full billing info\" for web subscriptions; a Substack help article (read only as a search excerpt, the page itself is blocked) says the billing address sits in Stripe and the country can be blank; Stripe's data model has name, address, card brand and last4 fields but whether Substack's checkout fills them is Substack's choice. A reader acts on none of this, and over-listing is the safe direction, so this is not blocking, but the page states it as fact.",
+   "evidence": "https://on.substack.com/p/in-app-payments-iap-faq (\"For web-based subscriptions ... you retain full billing info\"); https://docs.stripe.com/api/payment_methods/object (billing_details name/email/address nullable; card sub-object); Substack help article 51477875051668 \"How do I find the billing country of a paid subscriber\" (403 to my fetch)",
+   "fix": "Say what Substack confirms: \"For web payments, Stripe holds billing details such as your address and country and the type and last four digits of your card; we can look them up in Stripe, never the full card number.\" The publisher should open one real Stripe customer after the first paid signup (founding memberships open January 5) and correct the list to what is there."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, \"The newsletter\", second paragraph (\"in Substack's iPhone app, Apple does\")",
+   "what": "Too neat. Substack's FAQ says the in-app Apple option applies to the iOS app only (not Android), and Substack lets publishers offer U.S. readers a web checkout inside the app instead; Apple's option is always offered. So inside the iPhone app a payment may go through Apple or through web checkout (Stripe). For Apple payments the publisher gets the email address but not payment-method details.",
+   "evidence": "https://on.substack.com/p/in-app-payments-iap-faq (\"This change only affects the iOS app\"; \"Apple handles IAP billing, so details like payment method aren't shared\"; \"including U.S. web checkout in the app\"); https://techcrunch.com/2025/08/18/substack-writers-can-now-direct-u-s-readers-to-often-cheaper-web-based-subscriptions-on-ios",
+   "fix": "\"If you buy a paid subscription in a web browser, Stripe processes the payment. In Substack's iPhone app, Apple may process it instead; then we get your email address but not your payment details.\""
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, \"The newsletter\" third paragraph and \"Your choices\", Do Not Track bullet (§22575(b)(5) and (b)(6))",
+   "what": "Both items are answered in substance but not in the plain yes-or-no the statute asks for. (b)(6) wants a statement of whether other parties may collect information about a reader's activity across sites. The site half is explicit (no); the Substack half is indirect (\"uses cookies, some set by third parties\"). \"Do Not Track\" is never explained to a non-technical reader, and Substack's position sits in one place while the site's sits in another. Also, Substack's policy says publishers can choose to add tracking and analytics cookies to their own publication; the page never says this publication has none.",
+   "evidence": "enrolled AB 370 text https://www.leginfo.ca.gov/pub/13-14/bill/asm/ab_0351-0400/ab_370_bill_20130927_chaptered.htm and https://california.public.law/codes/business_and_professions_code_section_22575 (verified Nov. 2, 2026): (5) \"Disclose how the operator responds to Web browser 'do not track' signals ...\", (6) \"Disclose whether other parties may collect personally identifiable information about an individual consumer's online activities over time and across different Web sites ...\"; https://substack.com/privacy (Last Updated May 14, 2026): \"Creators on Substack may choose to set certain tracking and analytics cookies\" ... \"cookies set by third parties such as Twitter, Facebook, Google\"; \"Our services do not support Do Not Track requests at this time\"",
+   "fix": "Add one sentence: \"On Substack's own pages, other companies may collect information about what you do there and after you leave, through cookies; Substack says it does not honor Do Not Track (a browser setting that asks sites not to track you). On this site, no one does.\" Before launch, the publisher should confirm in Substack's settings that no analytics or tracking pixel is switched on for the publication, then add \"We have not added any.\""
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, \"Email you send us\" (Anthropic sentence)",
+   "what": "\"processed by Anthropic's Claude service under Anthropic's terms\" is true but vague, and gives a reader no link, unlike Substack and Stripe. Anthropic's consumer privacy policy says inputs and outputs may be used to train its models unless the account owner opts out, and describes retention only as \"as long as reasonably necessary\"; its business terms differ. Which applies depends on the publisher's account, which the page does not say.",
+   "evidence": "https://www.anthropic.com/legal/privacy (Effective Sep 10, 2026): \"We may use your Inputs and Outputs to train and improve Anthropic AI models\" ... \"unless you opt out through your account settings\"; the policy \"does not apply to content that we process on behalf of customers of our business offerings\"",
+   "fix": "Link Anthropic's privacy policy next to \"Anthropic's terms\". The publisher should check which kind of account runs the agents and whether training is switched off, then say so in a clause (\"Anthropic does not use it to train its models\" only if that is true)."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, \"Your choices\" and site/disclaimer.md, \"When something is wrong\" (last sentences); both pages, who \"we\" and \"the publisher\" are",
+   "what": "The disclaimer's only contact route is \"reply to any issue\"; someone who found the site without subscribing (or after unsubscribing) has no issue to reply to, and the disclaimer has no address. Neither page says who \"we\" or \"the publisher\" is; a reader cannot tell who runs the newsletter or who is responsible for the data. The address andzrev@pm.me appears nowhere else in the project, so I could not tell whether it is the address a Substack reply reaches.",
+   "evidence": "site/disclaimer.md \"When something is wrong\"; site/privacy.md \"Your choices\"; grep of the project and skill folders finds the address only in site/privacy.md and docs/privacy/index.html; pm.me has Proton MX records (a mailbox's existence is not testable)",
+   "fix": "Put the same contact address on the disclaimer (\"write to andzrev@pm.me or reply to any issue\") and add a line saying who is behind the newsletter (the name Paid in Equity, and the publisher's name if they choose to give it). The publisher should confirm that address is the Substack reply-to."
+  },
+  {
+   "severity": "minor",
+   "where": "site/disclaimer.md, \"How it's made\", second sentence (\"Every figure comes from a primary source ...\")",
+   "what": "\"Every figure\" overclaims: the page's own previous section says the characters' pay, grants and returns are made up, and the bad, likely and great values are scenarios. House rule 9 is about tax rules and limits (and says a not-yet-published figure is shown as last year's stand-in, which the sentence does not allow for). A reader who takes it literally could think the character's salary is sourced.",
+   "evidence": "site/disclaimer.md \"Fictional examples\" (\"made-up pay, grants and tax returns\"); house-rules.md rule 9",
+   "fix": "\"Every tax rule and limit comes from a primary source ..., carries the date it was checked, and is labeled when it is last year's figure standing in for one not yet published.\""
+  },
+  {
+   "severity": "minor",
+   "where": "site/disclaimer.md, \"How it's made\" last sentence and \"The calculators\" first two sentences; site/privacy.md, \"The calculators\"",
+   "what": "Written in the present tense about calculators that do not exist yet: the live index says \"The first one arrives with the first issue\" (November 17), and the project's engine/ folder is empty, so no calculator has been tested against anything. The promises (tested against the IRS's worked examples; no network calls; nothing stored) are the plan's, and house rule 7 has `pie privacy` enforce the code side, so they can be kept. They cannot be confirmed today.",
+   "evidence": "docs/index.html (\"The first one arrives with the first issue\"); engine/ contains no files; plan.md \"Trust, written down\"; house-rules.md rule 7",
+   "fix": "Either leave as is and re-verify when the first calculator ships (run `pie privacy`, and confirm the IRS-example tests exist), or add \"Each calculator is\" wording that reads as a standing commitment. Do not let the first issue go out before the claim is true."
+  },
+  {
+   "severity": "minor",
+   "where": "site/disclaimer.md, \"No professional relationship\", last sentence (\"it doesn't predict prices, markets or changes to tax law\")",
+   "what": "Kept as house rule 3 requires, but the newsletter's results are labeled \"bad, likely and great\" and each December closes with \"a look ahead\"; a reader can take \"likely\" as a prediction. The page is the natural place to say what those labels are, and honest limits are a stated house rule.",
+   "evidence": "plan.md \"Better math\" (bad, likely, great = 10th, 50th, 90th percentiles of the uncertain input) and \"The calendar\" (each December: a look ahead); house-rules.md rule 3",
+   "fix": "Add a sentence: \"Bad, likely and great are what-if scenarios built from one uncertain input, such as the share price at the next vest. They are not predictions, and replays of past years are not forecasts.\""
+  },
+  {
+   "severity": "minor",
+   "where": "site/disclaimer.md, first paragraph; site/privacy.md, \"The calculators\", \"This site\" and \"Your choices\" (plain English)",
+   "what": "Reading level is fine (about grade 8, 14 words a sentence), but terms a non-technical reader may not know are left undefined: withholding, alternative minimum tax (listed, never explained), IP address, cookies, browser storage, analytics, Do Not Track. Five sentences run past 30 words (disclaimer: \"Every figure comes from a primary source ...\" and \"When a reader reports an error ...\"; privacy: the Substack opens-and-clicks sentence, the \"Substack's own pages ... are different\" sentence and the \"Who gets your information\" list).",
+   "evidence": "word and sentence counts from site/*.md (Flesch-Kincaid grade 7.6 disclaimer, 7.9 privacy)",
+   "fix": "Add short glosses in brackets or a clause: \"your IP address (a number that identifies your internet connection)\", \"cookies (small files a site leaves in your browser)\", \"Do Not Track (a browser setting that asks sites not to track you)\"; split the five long sentences; the topics list in the disclaimer can drop \"withholding and the alternative minimum tax\" or say \"two terms the issues explain\"."
+  },
+  {
+   "severity": "minor",
+   "where": "site/privacy.md, \"The newsletter\" (survey sentence) and missing sections on purpose and retention",
+   "what": "The page says survey answers are linked to the email address but not what they are used for or how long anything is kept. The plan also has a separate anonymous reader survey (June 29 to August 31, 2027; no company names; groups of at least thirty) that this page does not mention and will need to before it opens. The sign-up survey's use for choosing topics is stated in the welcome email, not here.",
+   "evidence": "plan.md \"Survey (State of Equity Comp)\"; house-rules.md rule 10; site/privacy.md; welcome/free.md item 2 (answers help choose topics, never ask income or holdings)",
+   "fix": "One sentence on purpose (\"survey answers are used only to choose topics\") and one on retention (\"we keep subscriber and message records until you ask us to delete them or for as long as the newsletter runs\", adjusted to the publisher's real practice). Add a paragraph on the 2027 survey before it opens."
+  }
+ ],
+ "verified": [
+  "Live pages match the source: https://chauduyphanvu.github.io/paid-in-equity/disclaimer/ and /privacy/ fetched 2026-11-06 about 22:23 EST are byte-identical to docs/disclaimer/index.html and docs/privacy/index.html (cmp); their text equals site/disclaimer.md and site/privacy.md line for line once markup is removed; the publisher-note HTML comment is not rendered; git HEAD equals origin/main (fdbd880).",
+  "Every link on both pages works (HTTP 200, final URL unchanged): ../corrections/, ../ and ../disclaimer/ ../privacy/ footer links, https://paidinequity.substack.com/subscribe, https://github.com/chauduyphanvu/paid-in-equity (public), the two docs.github.com links, https://substack.com/privacy, https://stripe.com/privacy. mailto:andzrev@pm.me is a well-formed link to a domain with Proton MX records; the mailbox itself was not tested.",
+  "Site claims (\"no cookies, no tracking, no other party\"): docs/ HTML for all five pages has no script, iframe, img, link, form, @import, url() or external font; styling is inline and fonts are system fonts; the only outside references are hyperlinks the reader clicks. None of the five live responses sets a cookie (no Set-Cookie header).",
+  "GitHub: docs.github.com Pages page, \"Data collection\": \"When a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not.\" Matches the page's wording and link. GitHub privacy statement (effective April 27, 2026) is the right companion link.",
+  "Substack privacy policy (Last Updated May 14, 2026), read from the page: collects first and last name, email address, and payment details \"including billing address, credit card details\"; gives Creators \"your name and email address\"; \"we use Stripe ... to receive and process your credit card transactions\"; cookies, including Creator cookies that \"may include cookies set by third parties\"; \"we may collect information about your online activity after you leave our website\"; \"Our services do not support Do Not Track requests at this time\"; account deletion from the account page. Each matches the page's Substack sentences.",
+  "Substack subscriber dashboard guide (https://on.substack.com/p/subscriber-dashboard-guide): per subscriber, \"emails received, emails opened, link clicks\". Matches. The activity rating \"based on email opens and web views\" matches an excerpt of Substack's help article 6461334789652 (the help page itself returns 403 to me).",
+  "Substack in-app purchase FAQ: Apple handles IAP billing; iOS app only, Android cannot buy in the app; refunds for web checkout go through Stripe; publishers get the subscriber's email either way. Supports \"Stripe on the web, Apple in the iPhone app\" with the caveat in the minor finding.",
+  "California Bus. & Prof. Code §22575(b)(1) to (6), text from the enrolled AB 370 and california.public.law (verified Nov. 2, 2026): (1) categories of information and of third parties: covered (name, email, activity data, survey answers, payment details, IP address, messages; Substack, Stripe or Apple, GitHub, email provider, Anthropic); (2) review-and-change process: covered (write to the address, answer in 30 days); (3) how material changes are announced: covered (new effective date on the page, next issue mentions it); (4) effective date: covered (November 6, 2026, the day it went live); (5) Do Not Track response: covered (nothing tracked, nothing to switch off; Substack does not support it); (6) other parties collecting across sites: covered for the site explicitly, for Substack in substance (see the minor finding). §22577(b)(3)(A): the footer link reading \"Privacy\" on every page, home page included, satisfies \"conspicuously post\".",
+  "house-rules.md \"Site and email\" disclaimer list: all four things present (general information through fictional examples; no adviser, accountant or lawyer relationship; calculators without warranty and the reader's decisions their own; how corrections work, with a link to the log). Privacy list: Substack and Stripe collection, calculators collect nothing, GitHub Pages IP logging, how reader mail is kept, how to unsubscribe and ask for deletion: all present.",
+  "House rules 1 to 6 on the two pages: no sentence tells a reader what to do with money, shares or a job; no pick, ranking, forecast or replay; no law outside tax arithmetic interpreted; no form done for a reader; no credential claimed (\"adviser\" and \"accountant\" appear only to deny a relationship); no invented person (the four characters are called fictional); the page asks readers not to send figures, consistent with rule 1. Substack, Stripe, Apple, GitHub and Anthropic are named only as the publisher's own service providers, which §22575(b)(1) requires, not as something for readers to use. Rule 8 wording (\"not tax, investment or legal advice\") is present. How it is made is stated honestly: AI agents research, write and check, under the publisher's direction.",
+  "\"Messages are kept in the publisher's email and a private folder\": mail/ is in .gitignore and no file under mail/ is tracked, while the repo is public, so the private folder is not published.",
+  "Reading level: Flesch-Kincaid about grade 7.6 (disclaimer) and 7.9 (privacy); 14 words a sentence on average."
+ ],
+ "checked_at": "2026-11-06"
+}
